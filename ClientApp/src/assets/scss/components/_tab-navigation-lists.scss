@@ -1,0 +1,87 @@
+
+.tab-navigation-list {
+  &-wrapper {
+    flex: 1 1 auto;
+    min-width: calc(100% + $customScrollSize);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include custom-scroll;
+  }
+
+  .list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    border-radius: 8px 0 0 8px;
+    margin-bottom: 4px;
+    transition: all 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+
+    &-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-content {
+      min-width: 0;
+      max-width: 84%;
+      flex: 1 1 0;
+      word-wrap: break-word;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    &:not(:empty) {
+      padding: 10px 0 10px 20px;
+    }
+
+    &.active {
+      background-color: var(--white);
+
+      &:before {
+        background-color: var(--primary-color);
+      }
+
+      .navigation-text {
+        color: var(--primary-color);
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2.5px;
+      height: 100%;
+      background-color: transparent;
+      transition: all 0.4s;
+    }
+
+    .action-btn {
+      margin: 0 8px auto 0;
+    }
+  }
+
+  .navigation-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-3);
+    transition: all 0.4s;
+    transition-property: color;
+    @include truncate(2);
+
+    &-sm {
+      font-weight: 400;
+      margin-top: 4px;
+    }
+  }
+}

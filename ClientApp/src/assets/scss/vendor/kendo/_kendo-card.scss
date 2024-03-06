@@ -1,0 +1,26 @@
+:host {
+  ::ng-deep {
+    .ec-warning-card {
+      background-color: #FFF7DF;
+      padding: 20px;
+      border: 1px solid #F6E9C7;
+      border-radius: 10px;
+      margin-bottom: 16px;
+
+      .k-card-header {
+        padding: 0;
+        border: 0;
+
+        .k-card-title + .k-card-subtitle {
+          margin-top: 4px;
+        }
+      }
+
+      .k-card-actions {
+        padding: 0;
+        border: 0;
+        margin-top: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+
+
+.dp-box {
+    padding-right: 15px;
+
+    &-xs {
+        .dp-box-icon {
+            width: 18px;
+            height: 18px;
+
+            .dp-text {
+                font-size: 10px;
+            }
+        }
+    }
+
+    &-sm {
+        .dp-box-icon {
+            width: 24px;
+            height: 24px;
+
+            .dp-text {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &-md {
+        .dp-box-icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($primary-color-darker, 0.15);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        .dp-text {
+            color: var(--primary-color-darker);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &.ec {
+            &-badge {
+                margin-top: 3px;
+            }
+
+            &-blue {
+                background-color: rgba($primary-color-darker, 0.15);
+
+                .dp-text {
+                    color: var(--primary-color-darker);
+                }
+            }
+
+            &-orange {
+                background-color: rgba($orange-60, 0.15);
+
+                .dp-text {
+                    color: $orange-60;
+                }
+            }
+
+            &-green {
+                background-color: rgba($color-positive, 0.15);
+
+                .dp-text {
+                    color: var(--dark-green);
+                }
+            }
+
+            &-red {
+                background-color: rgba($highlight-color, .15);
+
+                .dp-text {
+                    color: var(--highlight-color);
+                }
+            }
+
+            &-purple {
+                background-color: rgba($purple-60, 0.15);
+
+                .dp-text {
+                    color: $purple-60;
+                }
+            }
+
+            &-indigo {
+                background-color: rgba(#8D53FF, 0.15);
+
+                .dp-text {
+                    color: #8D53FF;
+                }
+            }
+        }
+    }
+}

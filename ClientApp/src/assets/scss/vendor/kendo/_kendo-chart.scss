@@ -1,0 +1,48 @@
+@import "helpers/variables";
+@import "helpers/responsive";
+
+::ng-deep {
+    .k-chart-tooltip {
+        background: var(--black);
+        padding: 8px 20px 6px 10px;
+        border-radius: 10px;
+    }
+
+    .kendo-cutom-tooltip {
+        min-width: 105px;
+
+        .item-title {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--white);
+        }
+
+        .item-value {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 27px;
+            color: var(--white);
+        }
+    }
+
+    .chart-empty-state {
+        min-height: 280px;
+        margin: auto;
+
+        .state-icon {
+            max-width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 9px;
+        }
+
+        .state-title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--primary-text-color);
+        }
+    }
+}

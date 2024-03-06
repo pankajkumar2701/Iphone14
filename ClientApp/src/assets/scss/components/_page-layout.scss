@@ -1,0 +1,32 @@
+
+
+.main-section-column-wrapper {
+  display: flex;
+
+  .main-section-left {
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      z-index: 99;
+    }
+  }
+
+  .main-section-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+
+    &-wrapper {
+      min-width: 0;
+      flex: 1 1 0;
+      overflow: auto;
+      @include custom-scroll;
+    }
+  }
+}

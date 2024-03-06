@@ -1,0 +1,267 @@
+
+
+.scheduling-assistant-wrapper {
+    min-width: 845px;
+    max-width: 845px;
+
+    .roster-header {
+        &-action {
+            .roster-head-desc {
+                position: relative;
+                margin-right: 25px;
+                padding-left: 17px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                    width: 9px;
+                    height: 9px;
+                    background-color: #04aa77;
+                    border-radius: 2px;
+                }
+
+                &.busy-schedule {
+                    margin-right: 12px;
+
+                    &::before {
+                        background: rgba(246, 78, 96, 0.15);
+                        border: 1px solid rgba(246, 78, 96, 0.3);
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .roster-box {
+        background: var(--white);
+        margin-top: 20px;
+
+        .roster-body {
+            margin-top: 30px;
+        }
+
+        .roster-row {
+            border-bottom: 1px solid var(--border-color-light);
+
+            .doctor-list {
+                position: sticky;
+                top: 0;
+                left: 0;
+                background: var(--white);
+                min-width: 286px;
+                max-width: 286px;
+                padding: 12px 15px 12px 0;
+                border-right: 1px solid var(--border-color-light);
+                z-index: 3;
+
+                @include desktop {
+                    min-width: 222px;
+                    max-width: 222px;
+                }
+            }
+
+            .week-list {
+                max-width: 100%;
+                display: flex;
+                width: calc(100% - 286px);
+                margin-left: auto;
+                position: relative;
+                z-index: 2;
+
+                @include desktop {
+                    width: calc(100% - 222px);
+                }
+
+                &-item {
+                    // width: calc(100% / (24 - 3));
+                    // min-width: calc(100% / (24 - 3));
+                    max-width: 100%;
+                    border-right: 1px solid var(--border-color-light);
+                    z-index: 1;
+                    padding: 4px;
+
+                    .week-list-item-content {
+                        background-image: url("data:image/svg+xml,%3Csvg width='58' height='50' viewBox='0 0 58 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='58' height='50' fill='%23F0F8F5'/%3E%3Cmask id='mask0_7680_93603' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='58' height='50'%3E%3Crect x='0.5' y='0.5' width='57' height='49' fill='%23DFE1E5' stroke='%23CACED2'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_7680_93603)'%3E%3Crect x='-15.0508' y='30.0312' width='89' height='1' transform='rotate(41.8521 -15.0508 30.0312)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-13.335' y='23.9453' width='89' height='1' transform='rotate(41.8521 -13.335 23.9453)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-11.6182' y='17.8594' width='89' height='1' transform='rotate(41.8521 -11.6182 17.8594)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-9.90234' y='11.7695' width='89' height='1' transform='rotate(41.8521 -9.90234 11.7695)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-8.18652' y='5.68359' width='89' height='1' transform='rotate(41.8521 -8.18652 5.68359)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-6.4707' y='-0.40625' width='89' height='1' transform='rotate(41.8521 -6.4707 -0.40625)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-4.75488' y='-6.49219' width='89' height='1' transform='rotate(41.8521 -4.75488 -6.49219)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-3.03906' y='-12.5781' width='89' height='1' transform='rotate(41.8521 -3.03906 -12.5781)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='-1.32227' y='-18.6641' width='89' height='1' transform='rotate(41.8521 -1.32227 -18.6641)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='0.393555' y='-24.7539' width='89' height='1' transform='rotate(41.8521 0.393555 -24.7539)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='2.10938' y='-30.8438' width='89' height='1' transform='rotate(41.8521 2.10938 -30.8438)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='3.8252' y='-36.9297' width='89' height='1' transform='rotate(41.8521 3.8252 -36.9297)' fill='%23043D2B' fill-opacity='0.05'/%3E%3Crect x='5.54102' y='-43.0156' width='89' height='1' transform='rotate(41.8521 5.54102 -43.0156)' fill='%23043D2B' fill-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E%0A");
+                        background-size: cover;
+                        background-position: center;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    // &:hover {
+                    //     .roster-slot-tooltip {
+                    //         opacity: 1;
+                    //         visibility: visible;
+                    //     }
+                    // }
+                }
+
+                &-item-group {
+                    position: absolute;
+                    width: 100%;
+                    height: calc(100% - 10px);
+                    top: 5px;
+                    bottom: 5px;
+
+                    .row-wraper {
+                        position: relative;
+                        height: 100%;
+
+                        .group-item {
+                            display: flex;
+                            position: absolute;
+                            // left: calc((100% / (24 - 22)*(0.38))); //2 hr 59 min
+                            // left: calc((100% / 24)*(2 + (59/60))); //2 hr 59 min
+                            // width: calc((100% / (24 - 3))*(1.00));
+                            height: 100%;
+                            background: var(--white);
+                            z-index: 2;
+
+                            .slot-item {
+                                background: var(--white);
+                                height: 100%;
+                                padding: 0 1px;
+
+                                .available-slot {
+                                    background: #04aa77;
+                                    height: 100%;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        .roster-slot-tooltip {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+
+                                        background: #016c4b;
+                                    }
+                                }
+
+                                .busy-slot {
+                                    background: rgba(246, 78, 96, 0.1);
+                                    border: 1px solid rgba(246, 78, 96, 0.35);
+                                    height: 100%;
+
+                                    // pointer-events: none;
+                                    &:hover {
+                                        background: rgba(246, 78, 96, 0.1);
+                                        border: 1px solid rgba(246, 78, 96, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-header {
+                    padding: 3px;
+                    padding-right: 0;
+                    padding-top: 18px;
+                    padding-bottom: 18px;
+                }
+            }
+
+            &-header {
+                position: sticky;
+                top: 0;
+                background: var(--white);
+                z-index: 5;
+            }
+        }
+
+        .roster-body-content-wrapper {
+            position: relative;
+            overflow: auto;
+            overflow-x: scroll;
+            max-height: calc(100vh - 185px);
+
+            .roster-body-content {
+                // min-width: calc(82px * (24 - 3) + 286px);
+                position: relative;
+
+                .doctor-list {
+                    padding: 10px 15px 9px 0;
+                }
+            }
+
+            .btn-arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 24px;
+                max-width: 24px;
+                height: 24px;
+                padding: 0;
+                line-height: 0;
+                border-radius: 50%;
+                margin-right: 4px;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: var(--bg-color-4);
+                }
+            }
+        }
+
+        .doctor-details-box {
+            width: calc(100% - 45px);
+            white-space: nowrap;
+
+            .doctor-name {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .doctor-bs-details {
+                width: 100%;
+
+            }
+        }
+
+        .specialization-text {
+            margin-top: 4px;
+        }
+    }
+
+    .scheduling-assistant-tooltip {
+        position: fixed;
+        background: var(--white);
+        min-width: 157px;
+        padding: 16px;
+        border-radius: 5px;
+        box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.16);
+        opacity: 0;
+        visibility: hidden;
+        transition-duration: 0.3s;
+        transition-property: opacity, visibility;
+        pointer-events: none;
+        z-index: 10;
+
+
+        .data-item {
+            margin-top: 6px;
+        }
+
+        &.active-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .scroll-btn {
+        position: fixed;
+        z-index: 6;
+        margin-right: 0;
+        background: var(--white);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+        &-left {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

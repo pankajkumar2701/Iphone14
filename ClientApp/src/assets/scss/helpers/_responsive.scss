@@ -1,0 +1,35 @@
+// media querry variable
+$break-desktop-min: 992px;
+$break-large-xxl: 1599px;
+$break-large-xl: 1350px;
+$break-large: 1200px;
+$break-tab: 991px;
+
+@mixin desktop-min {
+    @media (min-width: $break-desktop-min) {
+        @content;
+    }
+}
+@mixin desktop-xxl {
+    @media (max-width: $break-large-xxl) {
+        @content;
+    }
+}
+
+@mixin desktop-xl {
+    @media (max-width: $break-large-xl) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $break-large) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $break-tab) {
+        @content;
+    }
+}

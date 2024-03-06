@@ -1,0 +1,90 @@
+
+
+.main-left-list-sec {
+    background-color: var(--main-bg);
+    width: 100%;
+    min-width: 445px;
+    max-width: 445px;
+    height: 100vh;
+    padding: 0px 0px 0px 34px;
+    border-right: 1px solid var(--border-color-dark);
+    .main-left-list-sec .list-sec-top-bar {
+        padding-top: 25px;
+    }
+    .search-box-sec {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 11;
+    }
+    .list-sec-scroll-wrapper {
+        width: calc(100% + 9px);
+        height: calc(100% - 157px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(237, 237, 237) transparent;
+        .patient-list-box{
+            min-height: 100%;
+            padding-bottom: 5px;
+            .list-card-item {
+                display: flex;
+                max-width: calc(100% - 35px);
+                margin-right: 35px;
+                margin-bottom: 15px;
+                transition-duration: 0.4s;
+                transition-property: background-color, border-color;
+                cursor: pointer;
+                background: var(--bg-color-6);
+                white-space: nowrap;
+                padding: 20px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: transparent;
+                border-image: initial;
+                border-radius: 10px;
+                .dp-box {
+                    padding-right: 15px;
+                    .dp-box-icon {
+                        min-width: 36px;
+    max-width: 36px;
+    height: 36px;
+    background-color: #eaf0fb;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 24px;
+                    }
+                }
+                .list-card-item-content {
+                    width: 100%;
+                    min-width: 0;
+                    flex: 1 1 0;
+                }
+                .material-icons {
+                    color: var(--secondary-text-color);
+                    font-size: 15px;
+                    margin-right: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+.main-left-list-sec{
+    padding-top: 25px;
+}
+
+.users-bs-details{
+    margin-top: 4px;
+}
+
+.users-footer-details {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.add-invoice-btn {
+    margin-right: 35px;
+}

@@ -1,0 +1,40 @@
+
+
+.blue-box {
+  background-color: #f4faff;
+  padding: 20px;
+  border: 1px solid #def2ff;
+  border-radius: 10px;
+
+  &-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .blue-box-section {
+    position: relative;
+    align-self: stretch;
+
+    &:not(:last-child) {
+      padding-right: 20px;
+    }
+
+    & + .blue-box-section {
+      padding-left: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 5px;
+        border-left: 1px solid var(--border-color);
+        transform: translateY(5px);
+      }
+    }
+
+    .section-content {
+      margin-top: 10px;
+    }
+  }
+}

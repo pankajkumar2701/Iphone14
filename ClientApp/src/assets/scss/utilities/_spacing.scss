@@ -1,0 +1,106 @@
+// This mixin generates CSS padding classes for different padding values.
+// Usage example: @include padding(0, 4, 8, 12, 16);
+@mixin padding($values...) {
+  @each $value in $values {
+    .ec-pt-#{$value} {
+      padding-top: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+
+    .ec-pr-#{$value} {
+      padding-right: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+
+    .ec-pb-#{$value} {
+      padding-bottom: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+
+    .ec-pl-#{$value} {
+      padding-left: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+  }
+}
+
+// This mixin generates CSS margin classes for different margin values.
+// Usage example: @include margin(0, 4, 8, 12, 16);
+@mixin margin($values...) {
+  @each $value in $values {
+    .ec-mt-#{$value} {
+      margin-top: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+
+    .ec-mr-#{$value} {
+      margin-right: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+
+    .ec-mb-#{$value} {
+      margin-bottom: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+
+    .ec-ml-#{$value} {
+      margin-left: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+  }
+}
+
+// This mixin generates CSS column gap classes for different column gap values.
+// Usage example: @include columnGap(0, 4, 8, 12, 16);
+@mixin columnGap($values...) {
+  @each $value in $values {
+    .ec-column-gap-#{$value} {
+      column-gap: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+  }
+}
+
+// This mixin generates CSS row gap classes for different row gap values.
+// Usage example: @include rowGap(0, 4, 8, 12, 16);
+@mixin rowGap($values...) {
+  @each $value in $values {
+    .ec-row-gap-#{$value} {
+      row-gap: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+  }
+}
+
+
+$values: 2, 4, 6, 8, 10, 12, 16, 20, 24, 32;
+
+@include columnGap($values...);
+@include rowGap($values...);
+@include padding($values...);
+@include margin($values...);
+
+// // margin auto values
+// .ec-mt-auto {
+//   margin-top: auto;
+// }
+
+// .ec-mr-auto {
+//   margin-right: auto;
+// }
+
+// .ec-mb-auto {
+//   margin-bottom: auto;
+// }
+
+// .ec-ml-auto {
+//   margin-left: auto;
+// }
+
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}

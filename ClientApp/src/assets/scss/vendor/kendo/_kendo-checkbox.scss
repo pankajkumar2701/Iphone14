@@ -1,0 +1,47 @@
+@import "../../helpers/variables";
+
+
+    .k-checkbox {
+        border: 2px solid var(--border-color-secondary);
+        margin-top: 3px;
+        transition: 0.3s;
+
+        &-md {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+        }
+
+        &:indeterminate,
+        &.k-indeterminate {
+            background-color: var(--primary-color);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='2' d='M4,8 h8'/%3e%3c/svg%3e");
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        &:checked,
+        &.k-checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+
+            &:focus,
+            &.k-focus {
+                box-shadow: none;
+            }
+        }
+    }
+    .k-checkbox-label{
+        font-size: 0.8rem;
+        color: var(--primary-text-color);
+        margin-top: 3px;
+    }
+
+    .checkbox-group{
+        display: flex;
+        .checkbox-item {
+            margin-right: 15px;
+            display: flex;
+          }
+    }
+

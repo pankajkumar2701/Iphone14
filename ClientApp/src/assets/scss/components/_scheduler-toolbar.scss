@@ -1,0 +1,50 @@
+
+
+
+:host {
+    display: flex;
+    align-items: center;
+
+    .btn-today {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--primary-black);
+        padding: 4px 12px;
+        border: 1px solid var(--primary-black);
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+
+    .date-label {
+        margin: 0 5px 0 20px;
+
+        &-day {
+            color: var(--color-5);
+            margin: 1px 5px 0 15px;
+
+            &-sa {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .btn-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        max-width: 24px;
+        height: 24px;
+        padding: 0;
+        line-height: 0;
+        border-radius: 50%;
+        margin-right: 4px;
+        background-color: transparent;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: var(--bg-color-4);
+        }
+    }
+}

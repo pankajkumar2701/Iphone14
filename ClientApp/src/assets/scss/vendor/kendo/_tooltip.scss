@@ -1,0 +1,22 @@
+.kendo-tooltip {
+    .k-callout {
+        background-color: transparent;
+        color: var(--white) !important;
+        border-top-color: transparent;
+        display: none;
+    }
+
+    * {
+        font-family: $font-family-base;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        color: var(--white) !important;
+        background: var(--black);
+    }
+}
+
+.kendo-tooltip-right-20 {
+    margin-left: -20px;
+    @extend .kendo-tooltip;
+}

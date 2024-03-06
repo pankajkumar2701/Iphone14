@@ -1,0 +1,33 @@
+
+
+.page-not-found-wrapper {
+  min-height: 100vh;
+}
+
+.content {
+  &-icon {
+    max-width: 2300px;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &-title {
+    font-size: 26px;
+    line-height: 31px;
+    color: var(--primary-black);
+  }
+
+  &-desc {
+    max-width: 572px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,30 @@
+<svg width="50" height="50" viewBox="0 0 246 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_43)">
+    <line x1="190.78" y1="83.0178" x2="166.366" y2="56.1571" stroke="white" stroke-width="6"/>
+    <line x1="87.5146" y1="186.691" x2="57.9179" y2="158.16" stroke="white" stroke-width="6"/>
+    <line x1="139.478" y1="186.655" x2="112.881" y2="160.124" stroke="white" stroke-width="6"/>
+    <line x1="142.515" y1="84.6911" x2="112.918" y2="56.1598" stroke="white" stroke-width="6"/>
+    <line x1="163.03" y1="134.738" x2="194.03" y2="107.738" stroke="white" stroke-width="6"/>
+    <circle cx="153" cy="201" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="101" cy="147" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="101" cy="43" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="205" cy="147" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="205" cy="96" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="153" cy="43" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="153" cy="147" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="101" cy="201" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="45" cy="147" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="101" cy="96" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="45" cy="96" r="17.5" stroke="white" stroke-width="5"/>
+    <circle cx="153" cy="96" r="17.5" stroke="white" stroke-width="5"/>
+    <line x1="57.0297" y1="82.7378" x2="88.0297" y2="55.7378" stroke="white" stroke-width="6"/>
+    <line x1="163.03" y1="186.738" x2="194.03" y2="159.738" stroke="white" stroke-width="6"/>
+    <line x1="57.0297" y1="133.738" x2="88.0297" y2="106.738" stroke="white" stroke-width="6"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_1_43">
+      <rect width="246" height="238" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
+

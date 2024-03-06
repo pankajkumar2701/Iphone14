@@ -1,0 +1,16 @@
+.animate__animated {
+    animation-duration: 0.5s;
+}
+
+.animate__slideInLeftCustom {
+    animation-name: slideInLeftCustom;
+}
+@keyframes slideInLeftCustom {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(72px, 0, 0);
+    }
+}

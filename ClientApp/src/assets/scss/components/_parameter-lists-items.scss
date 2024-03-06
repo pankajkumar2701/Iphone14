@@ -1,0 +1,35 @@
+
+
+.parameters-items {
+  .list-item {
+    position: relative;
+    padding: 12px 0;
+
+    & + .list-item {
+      border-top: 1px solid var(--border-color-light);
+    }
+
+    .item-name {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      .item-name {
+        color: var(--primary-black);
+      }
+
+      .action-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .action-btn {
+    display: flex;
+    margin-left: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+}

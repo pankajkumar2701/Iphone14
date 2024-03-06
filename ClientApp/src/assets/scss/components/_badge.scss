@@ -1,0 +1,162 @@
+.ec-badge {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    padding: 3px 7px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: 0.3s;
+
+    + .ec-badge {
+        margin-left: 8px;
+    }
+
+    &-sm {
+        font-size: 8px;
+        line-height: 11px;
+        padding: 1px 4px;
+        border-radius: 3px;
+    }
+
+    &-lg {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 6px 12px;
+    }
+
+    &-gray {
+        background-color: #ececf0;
+        color: var(--primary-text-color);
+        border-color: #bbb !important;
+
+        &-dark {
+            background-color: var(--primary-text-color);
+            color: var(--white);
+        }
+    }
+
+    &-red {
+        color: var(--highlight-color);
+        background-color: var(--bg-color-3);
+        border-color: #f1a0a8 !important;
+    }
+
+    &-org {
+        color: #ef6327;
+        background-color: #fde8df;
+        border-color: #f0aa8d !important;
+    }
+
+    &-green {
+        color: var(--dark-green);
+        background-color: #daf4ec;
+        border-color: #80c7b1 !important;
+
+        &-dark {
+            background-color: var(--dark-green);
+            color: var(--white);
+        }
+    }
+
+    &-blue {
+        color: #046bb3;
+        background-color: #deecf7;
+        border-color: #93c5e8 !important;
+
+        &-dark {
+            color: var(--white);
+            background-color: #046BB2;
+        }
+    }
+
+    &-violet {
+        color: #5921ca;
+        background-color: #e3daf6;
+        border-color: #ac90e4 !important;
+    }
+
+    &-yellow {
+        background-color: #f9edd4;
+        color: #c58100;
+        border-color: #dbbd81 !important;
+    }
+
+    &-pink {
+        color: #f64e60;
+        background-color: var(--bg-color-3);
+    }
+
+    &-filled-yellow {
+        background-color: #E3931A;
+        color: var(--white);
+    }
+
+    &-icon {
+        margin-left: 8px;
+        padding: 2px 4px !important;
+        border-radius: 30px !important;
+    }
+}
+
+.tag-box {
+    &:hover {
+        .ec-badge {
+            &-green {
+                background-color: rgba($color-positive, 0.2);
+            }
+
+            &-org {
+                background-color: rgba(#ef652a, 0.2);
+            }
+        }
+    }
+}
+
+.online-badge,
+.visit-type-badge {
+    background-color: var(--dark-green);
+    padding: 4px 9px 3px 9px;
+    border-radius: 5px;
+
+    .badge-icon {
+        margin: 0 6px 1px 0;
+
+        svg {
+            display: block;
+        }
+    }
+
+    .badge-text {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 13px;
+        color: var(--white);
+    }
+}
+
+.visit-type-badge {
+    background-color: var(--primary-color-darker);
+}
+
+.token-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.1;
+    padding: 0 4px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    margin-left: 8px;
+
+    &-blue {
+        background-color: #e5eef9;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}

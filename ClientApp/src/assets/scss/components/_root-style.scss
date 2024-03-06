@@ -1,0 +1,263 @@
+.cp-label {
+    width: 150px !important;
+    min-width: 150px !important;
+    max-width: 150px !important;
+    word-wrap: break-word;
+    padding-right: 12px;
+}
+
+.cp-content {
+    min-width: 130px;
+    width: 100%;
+
+    .mat-mdc-radio-group .mat-mdc-radio-button {
+        margin-bottom: 15px;
+    }
+
+    .form-control-bd-bt {
+        min-width: 0;
+        flex: 1 1 0;
+        padding: 0 4px 8px 4px;
+    }
+}
+
+.uom-inside-style {
+    .cp-label {
+        width: fit-content !important;
+        min-width: fit-content !important;
+        max-width: initial !important;
+        padding-right: 12px;
+    }
+
+    .cp-content {
+        display: inline-flex;
+        min-width: auto !important;
+        width: auto !important;
+        padding-right: 20px;
+
+        .bp-separator {
+            border: 0;
+            color: var(--secondary-text-color);
+        }
+
+        span {
+            position: relative;
+            width: fit-content !important;
+            padding: 3px 12px;
+            border: 0;
+            border-bottom: 1px solid var(--border-color-secondary);
+            border-radius: 0;
+        }
+
+        .uom-min-width {
+            min-width: 140px !important;
+        }
+    }
+}
+
+.uom-outside-style-with-cpBox {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    margin-left: 15px;
+
+    .cp-label {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+        padding-top: 3px;
+    }
+
+    .cp-content {
+        display: inline-flex;
+        align-items: center;
+        padding-right: 20px;
+
+        input {
+            border: 1px solid var(--border-color);
+            background-color: var(--main-bg);
+            min-width: 100px !important;
+            width: 100px !important;
+            border-radius: 3px;
+            padding: 5px 12px;
+        }
+
+        span {
+            padding-top: 6px;
+            border: 0;
+            position: relative;
+            width: -webkit-fit-content !important;
+            width: -moz-fit-content !important;
+            width: fit-content !important;
+            padding: 0 0 0 12px !important;
+        }
+    }
+}
+
+.cp-flex-view app-clinical-parameters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cp-vertical-view {
+    .mat-mdc-radio-group {
+        .mat-mdc-radio-button {
+            display: block !important;
+
+            &:last-child {
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+
+    .mat-mdc-checkbox {
+        display: block !important;
+        margin-bottom: 10px !important;
+
+        &:last-child {
+            margin-bottom: 0px !important;
+        }
+    }
+}
+
+.disable-badge {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.pregnacy-dashboard-style {
+    p {
+        span.color-danger {
+            font-weight: 600;
+            line-height: 18px;
+        }
+    }
+}
+
+.life-style-list {
+    .comp-title {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--color-3);
+    }
+}
+
+.ec-badge-white {
+    span.color-danger {
+        color: var(--primary-text-color) !important;
+    }
+}
+
+.space-fix {
+    .text-danger {
+        padding-left: 2px !important;
+        position: relative !important;
+        top: 1px !important;
+    }
+
+    .comp-high {
+        padding-left: 2px;
+    }
+}
+
+.toast-title {
+    color: var(--white);
+}
+
+.toast-message {
+    color: var(--white);
+    font-size: 13px;
+}
+
+.toast-close-button span {
+    color: var(--white);
+}
+
+.small-dialog-wrapper {
+
+    // current visit template dialog
+    .uom-inside-style {
+        .cp-label {
+            width: 150px !important;
+            min-width: 150px !important;
+            max-width: 150px !important;
+        }
+    }
+}
+
+.app-clinic-outside-template {
+    app-clinical-parameters {
+
+        .uom-inside-style {
+            .cp-label {
+                width: 150px !important;
+                min-width: 150px !important;
+                max-width: 150px !important;
+            }
+        }
+
+        .small-dialog {
+            padding: 0;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+app-investigation-results-dialog,
+app-new-invastigation-result-dialog {
+    .app-clinic-outside-template {
+        app-clinical-parameters {
+            > {
+                * {
+
+                    .form-group,
+                    .edit-content {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// specif style for app-visit-dashboard container
+app-visit-dashboard {
+    .padding-left-5 {
+        .comp-high {
+            padding-left: 5px;
+        }
+    }
+}
+
+// for view mode container
+app-covid19-history {
+    .completed-data-wrapper {
+        .comp-high {
+            flex-shrink: 0;
+            margin-left: 4px;
+        }
+    }
+}
+
+// specif style for app-visit-summary-dialog container
+app-visit-summary-dialog {
+    .list-item {
+
+        > .comp-title,
+        > .comp-text {
+            .comp-high {
+                margin-left: 6px;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+// main content gap
+.main-content-gap {
+    padding: 24px 32px;
+
+    @include desktop-xl {
+        padding: 12px;
+    }
+}

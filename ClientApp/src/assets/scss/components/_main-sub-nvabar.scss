@@ -1,0 +1,10 @@
+.main-sub-nvabar {
+    display: flex;
+    background: var(--bg-color-4);
+    border-radius: 10px;
+    overflow: hidden;
+
+    &:empty {
+        display: none;
+    }
+}

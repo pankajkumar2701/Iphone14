@@ -1,0 +1,341 @@
+// badge style for all visit components
+
+:host {
+    ::ng-deep {
+        .filter-highlight {
+            font-weight: 600;
+        }
+    }
+
+    .tab-badge {
+        display: inline-block;
+        border-radius: 5px;
+
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: relative;
+
+        &-list {
+            margin-bottom: -10px;
+        }
+
+        .tab-badge-tooltip-box {
+            min-width: 260px;
+            max-width: 45vw;
+            width: max-content;
+            white-space: nowrap;
+
+            .comp-text {
+                max-width: 190px;
+                white-space: normal;
+            }
+
+            .item-right {
+                display: block;
+                @include truncate;
+            }
+
+            &.allergies-tooltip {
+                width: 118px;
+            }
+
+            &.procedures-tooltip {
+                width: 146px;
+            }
+
+            &.comorbidities-tooltip {
+                width: auto;
+                white-space: nowrap;
+            }
+        }
+
+        &:hover {
+            .tab-badge-tooltip-box {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &-high {
+            .tab-badge-box {
+                &.current-status-active {
+                    background-color: var(--bg-color-3);
+
+                    .tab-badge-text {
+                        color: var(--highlight-color);
+                    }
+
+                    .close-btn {
+                        .material-icons {
+                            color: var(--highlight-color);
+                        }
+                    }
+                }
+
+                &.badge-on-focus {
+                    background-color: #d0e7ff;
+                }
+            }
+        }
+
+        .profile-content {
+            display: flex;
+            align-items: center;
+            padding: 4px 0 4px 10px;
+            cursor: pointer;
+
+            .profile-icon {
+                font-size: 16px;
+                color: var(--secondary-text-color);
+
+                & + .profile-text {
+                    margin-left: 6px;
+                }
+            }
+
+            .profile-title,
+            .profile-text {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 14px;
+                color: var(--primary-black);
+            }
+
+            .profile-title {
+                font-weight: 600;
+                margin: 0 4px 0 6px;
+            }
+        }
+
+        .badge-menu-btn {
+            margin: auto 0 auto 2px;
+        }
+
+        /* TODO(mdc-migration): The following rule targets internal classes of menu that may no longer apply for the MDC version.*/
+        mat-menu {
+            & + .close-btn {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .tab-badge-box {
+        display: flex;
+        background-color: transparent;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        padding-right: 10px;
+        transition: 0.4s;
+
+        &.is-suggested:not(.current-status-active) {
+            border-color: var(--border-color-3);
+        }
+
+        &.badge-suggested:not(.current-status-active) {
+            border-width: 1px 1px 1px 3px;
+            border-color: #b996ff;
+        }
+
+        &.badge-red:not(.current-status-active) {
+            border-color: var(--highlight-color);
+
+            &:hover {
+                border-color: #E24152D9;
+            }
+        }
+
+        &.badge-green:not(.current-status-active) {
+            border-color: #008F64B2;
+        }
+
+        &.badge-neutral:not(.current-status-active) {
+            border-color: #E0E0E0;
+            background-color: #ECECF0B2;
+        }
+
+        &.current-status-active {
+            background-color: var(--bg-secondary);
+
+            .tab-badge-text {
+                color: var(--primary-black);
+            }
+
+            &:hover {
+                background-color: #d0e7ff;
+            }
+        }
+
+        &.badge-on-focus {
+            background-color: #d0e7ff;
+        }
+
+        &.disabled {
+            opacity: 0.6;
+
+            .tab-badge-text {
+                opacity: 0.6;
+            }
+        }
+
+        .fevr-btn {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            margin-left: 10px;
+
+            .material-icons {
+                font-size: 16px;
+                color: #ffa800;
+
+                &.non-favorite {
+                    color: var(--icon-color);
+                }
+            }
+        }
+
+        .close-btn {
+            @extend .fevr-btn;
+
+            .material-icons {
+                font-size: 16px;
+                color: var(--primary-color);
+                transition: 0.3s;
+            }
+
+            &:hover {
+                .material-icons {
+                    color: var(--highlight-color);
+                }
+            }
+        }
+
+        .tab-badge-text {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 14px;
+            color: var(--primary-black);
+            padding: 4px 0 4px 10px;
+            cursor: pointer;
+
+            &.high {
+                color: var(--highlight-color);
+            }
+        }
+
+        .tab-badge-text-box {
+            .tab-badge-text {
+                & + .tab-badge-text {
+                    padding-left: 3px;
+                }
+            }
+        }
+
+        .suggested-tag {
+            margin-left: 12px;
+        }
+
+        .tab-profile-content {
+            position: absolute;
+            top: 35px;
+            min-width: 388px;
+            max-width: 388px;
+            background-color: var(--white);
+            padding: 15px 17px;
+            padding-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.16);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+            z-index: 99;
+            pointer-events: none;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -15px;
+                left: 0;
+                height: 15px;
+                width: 100%;
+            }
+
+            .tab-badge-list {
+                margin-bottom: 5px;
+
+                .tab-badge-text {
+                    cursor: auto;
+                }
+            }
+        }
+
+        .action-tooltip {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            min-width: 50px;
+            background-color: var(--white);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.16);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+            z-index: 99;
+            pointer-events: none;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -15px;
+                left: 0;
+                height: 15px;
+                width: 100%;
+            }
+        }
+
+        &:hover {
+
+            .tab-profile-content,
+            .action-tooltip {
+                pointer-events: all;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &.tab-badge-box-view {
+            .tab-badge-text {
+                cursor: auto;
+            }
+        }
+    }
+
+    .last-visit {
+        .visit-content-title {
+            padding-bottom: 8px;
+        }
+    }
+
+    // badge-more
+    .badge-more {
+        margin-left: 10px;
+    }
+
+    .cdk-drag {
+        .tab-badge-box {
+            background-color: var(--bg-secondary);
+
+            .drag-handle {
+                display: flex;
+                align-items: center;
+                line-height: 9px;
+                padding-left: 5px;
+                cursor: move;
+            }
+        }
+    }
+}

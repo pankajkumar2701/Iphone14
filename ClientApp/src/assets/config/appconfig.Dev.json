@@ -1,0 +1,17 @@
+{
+    "environment": {
+        "name": "Dev",
+        "production": true
+    },
+    "logging": {
+        "console": true,
+        "appInsights": false
+    },
+    "api": {
+        "url": "**********CONFIGURATION VALUE**********"
+    },
+    "buildInfo": {
+        "number": "**********CONFIGURATION VALUE**********",
+        "createdOn": "**********CONFIGURATION VALUE**********"
+    }
+}

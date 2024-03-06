@@ -1,0 +1,55 @@
+<section class="auth-page-wrapper py-5 position-relative d-flex align-items-center justify-content-center min-vh-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        <div class="card mb-0">
+          <div class="row g-0 align-items-center">
+            <div class="col-xxl-5">
+              <div class="card auth-card h-100 border-0 shadow-none d-none d-sm-block mb-0">
+                <img src="assets/images/logo-details-info.svg" alt="">
+              </div>
+            </div>
+            <div class="col-xxl-6 mx-auto">
+              <div class="card mb-0 border-0 shadow-none mb-0">
+                <div class="card-body p-sm-5 m-lg-4">
+                  <div class="text-center mt-5">
+                    <h5>Welcome Back</h5>
+                    <p class="text-less-imp mt-2">Sign in to continue to Code zen.</p>
+                  </div>
+                  <div class="p-2 mt-5">
+                     <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                        <mat-form-field class="input-form-field input-flds field-pb-0">
+                          <mat-label>User name</mat-label>
+                          <input matInput formControlName="userName">
+                      </mat-form-field>
+                    </div>
+                    
+                  <div class="form-group">
+                    <mat-form-field class="input-form-field input-flds field-pb-0">
+                      <mat-label>Password</mat-label>
+                      <input matInput formControlName="password"  type="password">
+                  </mat-form-field>
+                </div>
+                  <div class="form-group d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                      <mat-checkbox class="mat-check-box-field">Remember me</mat-checkbox>
+                    </div>
+                    <button type="button" class="cz-link-btn">Forgot Password</button>
+                  </div>
+                      <button class="ec-primary-btn w-100" type="submit">Login</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

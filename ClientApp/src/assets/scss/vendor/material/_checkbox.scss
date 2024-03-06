@@ -1,0 +1,191 @@
+:root {
+  --ec-checkbox-unselected-icon-color: var(--border-color-secondary);
+}
+
+/* There is a space at the bottom of every checkbox.
+ * to avoid extra spacing on the bottom
+ * please add this class 'checkbox-group-wrapper'.
+ */
+.checkbox-group-wrapper {
+  --ec-checkbox-list-gap-y: 15px;
+  --ec-checkbox-list-gap-x: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0 0 calc(-1 * var(--ec-checkbox-list-gap-y)) calc(-1 * var(--ec-checkbox-list-gap-x));
+
+  .mat-mdc-checkbox {
+    margin: 0 0 calc(var(--ec-checkbox-list-gap-y)) calc(var(--ec-checkbox-list-gap-x));
+  }
+
+  &-spacing-y {
+    --ec-checkbox-list-gap-x: 0px;
+  }
+}
+
+.mat-check-box-field {
+  --mdc-checkbox-state-layer-size: 0;
+  --ec-checkbox-size: 17px;
+  --ec-checkbox-gap: 8px;
+
+  &-mb {
+    margin-bottom: 20px;
+  }
+
+  &.mat-accent {
+    --mdc-checkbox-unselected-icon-color: var(--ec-checkbox-unselected-icon-color);
+    --mdc-checkbox-unselected-focus-icon-color: var(--border-color-secondary);
+    --mdc-checkbox-selected-checkmark-color: var(--white);
+    --mdc-checkbox-unselected-hover-icon-color: var(--primary-color);
+    --mdc-checkbox-disabled-selected-icon-color: var(--primary-color);
+  }
+
+  &.mat-mdc-checkbox .mdc-checkbox {
+    .mdc-checkbox__native-control:not([disabled]):focus ~ .mdc-checkbox__ripple {
+      opacity: 0;
+    }
+  }
+
+  .mdc-checkbox,
+  .mdc-checkbox__background,
+  .mat-mdc-checkbox-touch-target {
+    height: var(--ec-checkbox-size);
+    width: var(--ec-checkbox-size);
+  }
+
+  .mdc-checkbox {
+    flex: 0 0 var(--ec-checkbox-size);
+  }
+
+  .mdc-checkbox__background {
+    transition: .3s;
+  }
+
+  .mdc-form-field {
+    label {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--color-3);
+      padding-left: var(--ec-checkbox-gap);
+    }
+
+    &--align-end {
+      width: 100%;
+      justify-content: space-between;
+
+      label {
+        padding-right: var(--ec-checkbox-gap);
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .suggested-tag {
+    margin-left: 10px;
+  }
+
+  &.field-pb-0 {
+    margin-bottom: 0;
+  }
+
+  &.comp-high {
+    .mdc-form-field {
+      label {
+        color: var(--highlight-color);
+      }
+    }
+  }
+
+  &-quarter {
+    width: calc(100% / 3);
+    max-width: 100%;
+  }
+
+  &-ellipsis {
+    .mdc-form-field {
+      display: flex;
+    }
+
+    .mdc-form-field {
+      label {
+        display: flex;
+        min-width: 0;
+        flex: 1 1 0;
+      }
+    }
+
+    .checkbox-text {
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 17px;
+      color: var(--color-3);
+      @include truncate;
+    }
+  }
+
+  &.mat-check-box-with-controls {
+    .mdc-form-field {
+      label {
+        display: flex;
+      }
+    }
+
+    .action-btn {
+      display: flex;
+      margin: -4px 0 0 5px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      .action-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.mat-pseudo-checkbox {
+  &.mat-pseudo-checkbox-minimal {
+    width: 14px;
+    height: 14px;
+
+    &.mat-pseudo-checkbox-checked::after {
+      width: 9px;
+      height: 5px;
+    }
+  }
+}
+
+// disabled state
+.mdc-checkbox--disabled {
+  opacity: .3;
+}
+
+
+// multi select checkbox bg color
+.mat-pseudo-checkbox {
+  color: var(--ec-checkbox-unselected-icon-color);
+}
+
+// checkbox column list style
+.checkbox-column-list-sm {
+  display: flex;
+  flex-direction: column;
+
+  .mat-mdc-checkbox {
+    .mdc-form-field {
+      align-items: flex-start;
+    }
+
+    & + .mat-mdc-checkbox {
+      margin-top: 9px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

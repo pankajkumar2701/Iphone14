@@ -1,0 +1,488 @@
+
+
+body {
+    :host {
+        ::ng-deep {
+            .print-item {
+                .presc {
+                    &-content {
+                        padding-bottom: 11px;
+                        border-bottom: 1px solid var(--color-3);
+
+                        &:last-child {
+                            border-bottom: none;
+                            padding-bottom: 0;
+                        }
+
+                        &:first-child {
+                            padding-top: 0;
+                        }
+
+                        .presc-header {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .qualification-text {
+                                margin-top: 3px;
+                            }
+
+                            .presc-header-text {
+                                margin-top: 9px;
+                            }
+
+                            .presc-logo {
+                                display: flex;
+                                justify-content: flex-end;
+                                max-width: 125px;
+                                max-height: 70px;
+
+                                .logo-wrapper {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pipe-item {
+                &:not(:last-child) {
+                    position: relative;
+                    padding-right: 8px;
+                    margin-right: 8px;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        margin: 0 8px;
+                        width: 1px;
+                        height: 14px;
+                        border-left: 1px solid var(--color-3);
+                    }
+                }
+            }
+
+            .comma-item {
+                &:not(:last-child) {
+                    position: relative;
+                    padding-right: 8px;
+
+                    &:after {
+                        content: ", " !important;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .presc-row {
+                .row-mode {
+                    margin-top: 9px;
+                    display: flex;
+                    align-items: baseline;
+
+                    .row-title {
+                        font-weight: 600;
+                        font-size: 11px;
+                        line-height: 20px;
+                        color: var(--primary-black);
+                        margin-right: 9px;
+                        min-width: max-content;
+                    }
+
+                    .row-mode-item {
+                        display: flex;
+                        align-items: baseline;
+
+                        + .row-mode-item {
+                            margin-top: 2px;
+                        }
+                    }
+
+                    .col-left {
+                        width: calc(100% - 79px);
+                        max-width: 100%;
+                    }
+                }
+
+                .col-mode {
+                    display: flex;
+                    flex-direction: column;
+
+
+                }
+
+                .signature-content-wrapper {
+                    max-width: 20%;
+
+                    .signature-box {
+                        max-width: 100%;
+                        margin-bottom: 5px;
+
+                        img {
+                            max-width: 150px;
+                            max-height: 70px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .guideline {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 9px;
+
+                    .check-icon {
+                        display: block;
+                        min-width: 8px;
+                        max-width: 8px;
+                        width: 8px;
+                    }
+
+                    svg {
+                        display: block;
+                        margin-top: 6px;
+                        margin-right: 9px;
+                        min-width: 8px;
+                    }
+
+                    .presc-text {
+                        font-size: 12px;
+
+                        + .presc-text {
+                            margin-top: 2px;
+                        }
+                    }
+                }
+
+                .guidelines-title-wrapper {
+                    width: 10%;
+                }
+
+                .guidelines-content-wrapper {
+                    width: 90%;
+                }
+            }
+
+            .presc-text-sm {
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 15px;
+                color: var(--primary-black);
+            }
+
+            .patient-box {
+                max-width: calc(100% - 165px);
+
+                .patient-name {
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: var(--primary-black);
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                    word-break: break-word;
+                }
+
+                .presc-text {
+                    font-size: 12px;
+                }
+
+                .pipe-item {
+                    &:after {
+                        bottom: 2px;
+                    }
+                }
+
+                .comma-item {
+                    &:after {
+                        content: " " !important;
+                        bottom: 2px;
+                    }
+                }
+            }
+
+            .basic-table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 7px;
+
+                th {
+                    padding: 5px 0;
+                    border-top: 0.5px solid var(--color-3);
+                    border-bottom: 0.5px solid var(--color-3);
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 17px;
+                    color: var(--primary-black);
+                }
+
+                td {
+                    font-weight: normal;
+                    font-size: 11px;
+                    line-height: 17px;
+
+                    color: var(--primary-black);
+                    padding: 6px 20px 5px 0;
+                    border-top: none;
+                    word-break: break-word;
+
+                    &.cell-min-width {
+                        padding-right: 8px;
+                    }
+
+                    &.instructionRow {
+                        padding-top: 0;
+                        border-top: none;
+                    }
+                }
+
+                tr {
+                    border-bottom: 2px solid #e5e7eb;
+
+                    &:last-child {
+                        border-bottom: 0.5px solid var(--color-3);
+                    }
+
+                    &:first-child {
+                        border-bottom: 0.5px solid var(--color-3);
+                    }
+                }
+
+                .table-data {
+                    vertical-align: text-top;
+                    width: 100%;
+                    border-bottom: 1px solid rgba(126, 133, 153, 0.2);
+                    // padding-top: 8px;
+                    padding-bottom: 5px;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    + .table-data {
+                        padding-top: 12px;
+                    }
+
+                    &-title {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        line-height: 17px;
+                    }
+
+                    &-bold {
+                        font-weight: 600;
+                    }
+
+                    &-capitalize {
+                        text-transform: uppercase;
+                    }
+                }
+
+                &-border {
+                    tr {
+                        border-bottom: 0.5px solid rgba($secondary-text-color, 0.2);
+
+
+                        &:first-child {
+                            th {
+                                text-align: center;
+                            }
+                        }
+
+                        &.header-tr {
+                            border-bottom: 0.5px solid var(--color-3);
+
+                            & + tr {
+                                th {
+                                    border-bottom-color: rgba($secondary-text-color, 0.2);
+                                }
+                            }
+                        }
+                    }
+
+                    th,
+                    td {
+                        padding: 5px 10px;
+                        border-right: 0.5px solid var(--color-3);
+
+                        &:first-child {
+                            padding-right: 0;
+                            padding-left: 0;
+                        }
+
+                        &:last-child {
+                            border-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .w-100 {
+                width: 100%;
+            }
+
+            .w-80 {
+                width: 80%;
+            }
+
+            .medication-sub-table {
+                position: relative;
+                left: 15px;
+                width: 100%;
+                border-top: none;
+                border-bottom: none;
+
+                li {
+                    list-style: none;
+                    border-bottom: none;
+                    padding: 5px 0;
+
+                    &:last-child {
+                        border-bottom: none !important;
+                    }
+                }
+
+                li {
+                    border-top: none;
+                    // border-bottom: 1px solid rgba(126, 133, 153, 0.2);
+                }
+            }
+
+            .notes-view {
+                margin-top: 0px !important;
+
+                .row-title {
+                    font-weight: normal !important;
+                    font-size: 11px !important;
+                    line-height: 18px !important;
+                }
+            }
+
+            .wd40 {
+                width: 40%;
+            }
+
+            .presc-content-with-border {
+                padding-bottom: 11px !important;
+                border-bottom: 1px solid var(--color-3) !important;
+            }
+
+            .page-header,
+            .page-header-space {
+                height: 105px;
+            }
+
+            .page-footer,
+            .page-footer-space {
+                height: 100px;
+            }
+
+
+            .page-footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .page-header {
+                position: fixed;
+                top: 0mm;
+                width: 100%;
+            }
+
+            .page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            // .afterPageBreak {
+            //     page-break-after: always;
+            //     page-break-inside: avoid;
+            // }
+            .generic-med-style {
+                text-transform: capitalize;
+                font-size: 9px;
+            }
+
+            .medication-status {
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 18px;
+                color: var(--white);
+                padding: 0 6px;
+                background-color: var(--primary-black);
+            }
+
+            .medication-status-row {
+                + .medication-status-row {
+                    margin-top: 2px;
+                }
+
+                .medication-status {
+                    display: inline-block;
+                    margin-bottom: 8px;
+                    margin-top: 4px;
+                }
+            }
+
+            @page {
+                margin: 20mm;
+            }
+
+            @media print {
+                thead {
+                    display: table-header-group;
+                }
+
+                tfoot {
+                    display: table-footer-group;
+                }
+
+                button {
+                    display: none;
+                }
+
+                body {
+                    margin: 0;
+                }
+            }
+
+            .br-right {
+                font-size: 12px;
+                margin-right: 8px;
+                padding-right: 6px;
+                border-right: 1px solid var(--color-3);
+            }
+
+            .medical-certificate-box,
+            .referral-box {
+                border: 1px solid var(--border-color-dark);
+                box-sizing: border-box;
+                border-radius: 10px;
+                padding: 15px 20px;
+                margin-top: 25px;
+                margin-bottom: 2px;
+
+                .presc-text {
+                    font-size: 12px;
+                    margin-right: 8px;
+                    padding-right: 6px;
+
+                    &.br-right {
+                        border-right: 1px solid var(--color-3);
+                    }
+                }
+            }
+
+            .medical-certificate-box {
+                .signature-content {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

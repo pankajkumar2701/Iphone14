@@ -1,0 +1,43 @@
+
+// all search & mat select search feedback common style
+
+/* if it's for mat select also use this "no-data-wrapper-select */
+/* if the feedback message with box style also use this "no-data-wrapper-box */
+
+.no-data-wrapper {
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
+
+    &-box {
+        padding: 16px 10px;
+        border: 1px solid var(--border-color-dark);
+        border-radius: 10px;
+    }
+
+    &-select {
+        max-width: 300px;
+        padding: 0 20px 16px 20px;
+        margin: auto;
+    }
+
+    .no-data-text {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary-text-color);
+
+        & + .no-data-text,
+        & + .mat-mdc-button {
+            margin-left: 4px;
+        }
+    }
+
+    .no-data-bld {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--color-3);
+        margin: 0 4px;
+    }
+}

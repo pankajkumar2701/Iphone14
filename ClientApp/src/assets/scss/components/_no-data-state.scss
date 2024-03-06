@@ -1,0 +1,29 @@
+::ng-deep {
+  .no-data-state {
+    &-mh-100 {
+      min-height: 100vh;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 60px 30px;
+    }
+
+    .no-data-state {
+      &-img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto 35px auto;
+      }
+    }
+
+    &.no-data-state-list-box {
+      padding: 40px 35px 40px 0;
+    }
+  }
+}

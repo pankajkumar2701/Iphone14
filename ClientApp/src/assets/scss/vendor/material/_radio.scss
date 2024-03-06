@@ -1,0 +1,185 @@
+/* There is a space at the bottom of every radio button.
+ * to avoid extra spacing on the bottom
+ * please add this class 'radio-group-wrapper'.
+ */
+.mat-mdc-radio-group {
+  --ec-radio-list-gap-y: 15px;
+  --ec-radio-list-gap-x: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0 0 calc(-1 * var(--ec-radio-list-gap-y)) calc(-1 * var(--ec-radio-list-gap-x));
+
+  .mat-mdc-radio-button {
+    margin: 0 0 calc(var(--ec-radio-list-gap-y)) calc(var(--ec-radio-list-gap-x));
+  }
+}
+
+.mat-mdc-radio-button {
+  --ec-radio-size: 18px;
+  --mdc-radio-state-layer-size: var(--ec-radio-size);
+  --ec-radio-gap: 8px;
+  position: relative;
+
+  .radio-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-3);
+  }
+
+  &.mat-accent {
+    --mdc-radio-unselected-icon-color: var(--border-color-secondary);
+    --mdc-radio-unselected-focus-icon-color: var(--border-color-secondary);
+    --mdc-radio-selected-checkmark-color: var(--white);
+    --mdc-radio-unselected-hover-icon-color: var(--primary-color);
+  }
+
+  .mdc-radio,
+  .mdc-radio__background,
+  .mat-mdc-radio-touch-target {
+    height: var(--ec-radio-size);
+    width: var(--ec-radio-size);
+  }
+
+  .mdc-radio {
+    flex: 0 0 var(--ec-radio-size);
+  }
+
+  .mdc-radio__background {
+    .mdc-radio__inner-circle {
+      background-color: var(--mdc-radio-selected-icon-color);
+      border-width: calc(var(--ec-radio-size) / 2 + 0.5px);
+    }
+  }
+
+  .mdc-form-field {
+    label {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--color-3);
+      white-space: normal;
+      padding-left: var(--ec-radio-gap);
+    }
+
+    &--align-end {
+      width: 100%;
+      justify-content: space-between;
+
+      label {
+        padding-right: var(--ec-radio-gap);
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.comp-high {
+    .mdc-form-field {
+      label {
+        color: var(--highlight-color);
+      }
+    }
+  }
+
+  &.text-success {
+    .mdc-form-field {
+      label {
+        color: var(--color-positive);
+      }
+    }
+  }
+
+
+  .tab-badge-tooltip-box {
+    left: 0;
+  }
+
+  &:hover {
+    .tab-badge-tooltip-box {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.radio-text-list {
+  --ec-radio-list-gap-y: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .mat-mdc-radio-button {
+    display: flex;
+    justify-content: center;
+    background: var(--main-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.4s;
+
+    .mdc-radio {
+      display: none;
+    }
+
+    .mdc-form-field {
+      label {
+        width: 100%;
+        font-weight: 400;
+        font-size: 14x;
+        line-height: 19px;
+        color: var(--secondary-text-color);
+        text-align: center;
+        padding: 6px 20px;
+        transition: all 0.4s;
+      }
+    }
+
+    &.mat-mdc-radio-checked {
+      border-color: var(--primary-text-color);
+
+      .mdc-form-field {
+        label {
+          font-weight: 500;
+          color: var(--color-3);
+        }
+      }
+    }
+  }
+}
+
+// radio button row style left icon and right controls
+.radio-button-row-controls {
+  display: flex;
+  margin-left: -20px;
+
+  &-lists {
+    .radio-button-row-controls {
+      &-list-item {
+        & + .radio-button-row-controls-list-item {
+          padding-top: 16px;
+          border-top: 1px solid var(--border-color-light);
+          margin-top: 16px;
+        }
+      }
+    }
+
+    .list-item-title {
+      color: var(--color-3);
+      margin-bottom: 12px;
+    }
+  }
+
+  .radio-button-row-item {
+    flex: 1 1 0%;
+    min-width: 0;
+    margin-left: 20px;
+  }
+
+  .mat-mdc-radio-button {
+    margin-right: 4px;
+  }
+
+  .form-cus-row {
+    min-width: 0;
+    flex: 1 1 0;
+  }
+}

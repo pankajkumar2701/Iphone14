@@ -1,0 +1,21 @@
+{
+    "environment": {
+        "name": "Local",
+        "production": false
+    },
+    "appInsights": {
+        "instrumentationKey": ""
+    },
+    "logging": {
+        "console": true,
+        "appInsights": false
+    },
+    "api": {
+        "url": "https://ntlowcodeapi.azurewebsites.net"
+    },
+    "buildInfo": {
+        "number": "1.0.0.0",
+        "createdOn": "28-Feb-2024 12:15 GMT"
+    },
+    "environments": []
+}

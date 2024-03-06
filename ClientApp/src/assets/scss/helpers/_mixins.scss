@@ -1,0 +1,81 @@
+@mixin custom-scroll {
+    scrollbar-color: light;
+    scrollbar-width: thin;
+    scrollbar-color: $border-color transparent;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: calc($customScrollSize - 1px);
+        height: calc($customScrollSize - 1px);
+    }
+
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-corner {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        min-width: 32px;
+        min-height: 32px;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: $border-color;
+        }
+    }
+}
+
+// placeholder
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// transition
+@mixin transition($timer) {
+    transition: all #{$timer + "s"};
+}
+
+// Ellipsis
+@mixin truncate($line: 1, $truncation-boundary: 100%) {
+    max-width: $truncation-boundary;
+    min-width: 0;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+
+    @if $line ==1 {
+        white-space: nowrap;
+    }
+
+    @else {
+        display: -webkit-box;
+        white-space: normal;
+    }
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tuncate-text {
+    @include truncate;
+}

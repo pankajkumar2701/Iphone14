@@ -1,0 +1,624 @@
+::ng-deep {
+    .mdc-dialog {
+        --ec-dialog-padding: 32px;
+
+        .mdc-dialog__container {
+            .mdc-dialog__surface {
+                padding: var(--ec-dialog-padding);
+                box-shadow: none;
+                @extend .ec-custom-scroll;
+            }
+
+            .mdc-dialog__content {
+                padding: 0 calc(var(--ec-dialog-padding) / 2);
+                margin: 0 calc(-1 * var(--ec-dialog-padding) / 2);
+            }
+        }
+    }
+
+    .cdk-overlay-dark-backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .mat-mdc-dialog-container {
+        --mdc-dialog-container-color: var(--white);
+        background-color: var(--mdc-dialog-container-color);
+        max-width: 934px !important;
+        border-radius: 15px !important;
+        box-shadow: 1px 1px 15px rgb(0 0 0 / 10%);
+        overflow: auto;
+
+        .small-dialog {
+            padding: var(--ec-dialog-padding) !important;
+            margin: 0 !important;
+
+
+            .mdc-dialog__surface {
+                padding: 0;
+            }
+
+            &-close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+
+                .material-icons {
+                    color: var(--color-3);
+                    font-size: 20px;
+                }
+
+                svg {
+                    width: 10px;
+                    height: auto;
+
+                    * {
+                        fill: var(--color-3);
+                    }
+                }
+            }
+        }
+
+        .dialog-form-controls {
+            padding-top: 12px;
+
+            .mat-mdc-button {
+                & + .mat-mdc-button {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .right-panel-width-fit {
+        .mat-mdc-dialog-container {
+            max-width: 100% !important;
+        }
+    }
+
+    .medication-dialog-wrapper {
+        max-width: 986px !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 100% !important;
+        }
+
+        .mat-mdc-dialog-content {
+            display: flex;
+            flex-direction: column;
+            max-height: calc(100vh - 140px);
+        }
+    }
+
+    .no-border-wrapper {
+        .mat-mdc-dialog-container {
+            position: relative;
+            border-radius: 0px !important;
+            @extend .ec-custom-scroll;
+        }
+    }
+
+    .logout-dialog-wrapper {
+        .mat-mdc-dialog-container {
+            position: relative;
+            box-shadow: 0px 7px 24px rgb(0 0 0 / 16%);
+            border-radius: 10px !important;
+            overflow: visible;
+
+            .mdc-dialog__surface {
+                padding: 0 !important;
+            }
+
+            &:before {
+                content: "";
+                width: 12px;
+                height: 12px;
+                background: var(--white);
+                border-radius: 1px;
+                transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+                position: absolute;
+                top: calc(50% - 6px - 2px);
+                left: -6px;
+            }
+        }
+    }
+
+    .small-dialog-wrapper {
+        min-width: 230px;
+        max-width: 630px !important;
+
+        .mdc-dialog__container {
+            .mdc-dialog__surface {
+                padding: 0;
+            }
+        }
+
+        .mat-mdc-dialog-content {
+            max-height: 100%;
+        }
+
+        .mat-mdc-dialog-container {
+            position: relative;
+            border: 1px solid var(--border-color-secondary);
+            border-radius: 10px !important;
+            box-shadow: 0px 7px 24px rgb(0 0 0 / 16%);
+        }
+
+        &.vaccination-dialog {
+            max-width: 680px !important;
+        }
+
+        &.covid-infection-dialog,
+        &.smoking-dialog {
+            max-width: 755px !important;
+        }
+
+        &.dignosis-dialog,
+        &.sub-drug-dialog,
+        &.add-referral-dialog {
+            max-width: 650px !important;
+        }
+
+        &.dosage-dialog {
+            max-width: 100% !important;
+
+            .mat-mdc-dialog-container {
+                max-width: 940px !important;
+            }
+        }
+
+        &.comorbidity-dialog {
+            max-width: 100% !important;
+
+            .mat-mdc-dialog-container {
+                max-width: 1010px !important;
+            }
+        }
+
+        &.datepicker-dialog {
+            min-width: auto;
+
+            .mat-mdc-dialog-container {
+                --ec-dialog-padding: 0;
+                max-width: 507px !important;
+                border: 0;
+            }
+        }
+
+        .small-dialog-loader-wrapper {
+            padding-right: 80px !important;
+        }
+
+        // &.small-dialog-size-xy {
+        //     .small-dialog-loader-wrapper {
+        //         min-height: 140px;
+        //         padding-right: 100px;
+        //         padding-bottom: 40px;
+        //     }
+        // }
+        // &.small-dialog-size-x {
+        //     .small-dialog-loader-wrapper {
+        //         min-height: 140px;
+        //         padding-right: 100px;
+        //     }
+        // }
+    }
+
+    .visit-mode-dialog-wrapper {
+        min-width: 474px;
+    }
+
+    .prescription-dialog-wrapper {
+        min-width: 1068px;
+        max-width: 1068px !important;
+
+        .mat-mdc-dialog-container {
+            margin: 0 auto;
+        }
+
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 140px);
+        }
+    }
+
+    .past-investigation-dialog-wrapper {
+        min-width: 795px;
+        max-width: 795px;
+
+        .mat-mdc-dialog-container {
+            max-width: 790px !important;
+            min-width: 790px !important;
+            border-radius: 15px !important;
+            box-shadow: 1px 1px 15px rgb(0 0 0 / 10%);
+
+            .mdc-dialog__surface {
+                padding: 0 !important;
+            }
+        }
+
+        .mdc-dialog__content {
+            --ec-dialog-padding: 0;
+        }
+    }
+
+    // common list & detail dialog large
+    .list-detail-dialog-lg {
+        .mat-mdc-dialog-container {
+            max-width: 85vw;
+            min-width: 85vw;
+            max-height: calc(100vh - 80px);
+            // min-height: calc(100vh - 80px);
+            padding: 0 !important;
+            box-shadow: 1px 1px 15px rgb(0 0 0 / 10%);
+            border-radius: 15px !important;
+
+            @include desktop-xl {
+                min-width: 85vw;
+            }
+
+            .mdc-dialog__surface {
+                padding: 0;
+            }
+
+            .mdc-dialog__content {
+                --ec-dialog-padding: 0;
+            }
+        }
+    }
+
+    .past-medication-dialog-wrapper {
+        min-width: 795px;
+    }
+
+    .post-examination-dialog-wrapper {
+        min-width: 836px;
+
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 140px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+    }
+
+    .investigation-dialog-wrapper,
+    .grpagh-dialog-wrapper,
+    .new-investigation-dialog-wrapper {
+        max-width: 95vw !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 100% !important;
+        }
+    }
+
+    .add-investigation-dialog-wrapper {
+        min-width: 953px !important;
+        max-width: 953px !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 100% !important;
+        }
+    }
+
+    .add-investigation-dialog-wrapper,
+    .investigation-dialog-wrapper,
+    .visit-dialog-wrapper,
+    .grpagh-dialog-wrapper,
+    .new-investigation-dialog-wrapper,
+    .print-preview-dialog-wrapper,
+    .documents-dialog-wrapper {
+        .mat-mdc-dialog-container {
+            padding: 0 !important;
+            box-shadow: 1px 1px 15px rgb(0 0 0 / 10%);
+            border-radius: 15px !important;
+
+            .mdc-dialog__surface {
+                padding: 0;
+            }
+
+            .mdc-dialog__content {
+                --ec-dialog-padding: 0;
+            }
+        }
+    }
+
+    .preview-change-dialog-wrapper {
+        .mat-mdc-dialog-container {
+            max-width: 1100px;
+            min-width: 1100px;
+
+            @include desktop-xl {
+                min-width: 90vw;
+            }
+        }
+    }
+
+    .customised-price-dialog-wrapper {
+        .mat-mdc-dialog-container {
+            max-width: 1110px;
+            min-width: 1110px;
+
+            @include desktop-xl {
+                min-width: 90vw;
+            }
+        }
+    }
+
+    .documents-dialog-wrapper {
+        max-width: 90vw !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 1128px;
+            min-width: 1128px;
+            max-height: calc(100vh - 140px);
+
+            @include desktop-xl {
+                min-width: 85vw;
+            }
+        }
+    }
+
+    .print-preview-dialog-wrapper {
+        max-width: 90vw !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 1163px;
+            min-width: 1163px;
+            max-height: calc(100vh - 100px);
+            min-height: calc(100vh - 100px);
+
+            @include desktop-xl {
+                min-width: 85vw;
+            }
+        }
+    }
+
+    .stock-ledger-dialog-wrapper {
+        max-width: 90vw !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 1375px;
+            min-width: 1375px;
+
+            @include desktop-xl {
+                min-width: 90vw;
+            }
+        }
+
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 140px);
+        }
+    }
+
+    .visit-dialog-wrapper {
+        max-width: 90vw !important;
+
+        .mat-mdc-dialog-container {
+            min-width: 1240px;
+            max-width: 1240px !important;
+            overflow: hidden;
+
+            @include desktop-xl {
+                min-width: 90vw;
+            }
+        }
+    }
+
+    .past-examination-dialog-wrapper {
+        min-width: 60vw;
+
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 140px);
+        }
+    }
+
+    .reports-dialog-wrapper {
+        width: 1124px !important;
+        max-width: 1124px !important;
+
+        .mat-mdc-dialog-container {
+            max-width: 1124px !important;
+            border-radius: 0 !important;
+        }
+
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 120px);
+        }
+    }
+
+    .add-appointment-wrapper,
+    .notification-dialog-wrapper,
+    .clinic-details-dialog-wrapper,
+    .change-plan-dialog-wrapper {
+        .mat-mdc-dialog-container {
+            @extend .ec-custom-scroll;
+        }
+    }
+
+    .invoice-dialog-wrapper {
+        max-width: 90vw !important;
+
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 150px);
+        }
+    }
+
+    .plan-details-dialog-wrapper,
+    .plan-comparison-dialog-wrapper,
+    .bank-details-wrapper,
+    .preview-invoice-dialog-wrapper,
+    .edit-parameter-dialog-wrapper {
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 140px);
+        }
+    }
+
+    .manage-container-list-dialog-wrapper,
+    .edit-emr-parameter-dialog-wrapper {
+        .mat-mdc-dialog-content {
+            max-height: calc(100vh - 150px);
+        }
+    }
+
+    .deepdive-dialog-wrapper {
+        max-width: 680px !important;
+
+        .mat-mdc-dialog-content {
+            max-height: 100%;
+        }
+    }
+
+    .investigation-chart-dialog-wrapper {
+        .mat-mdc-dialog-container {
+            min-width: 825px;
+
+            @include desktop {
+                min-width: auto;
+            }
+        }
+    }
+
+    .import-patients-dialog-wrapper,
+    .import-patients-details-dialog-wrapper {
+        max-width: 94vw !important;
+
+        .mat-mdc-dialog-container {
+            width: 94vw;
+            max-width: 1376px !important;
+        }
+    }
+
+    .communication-reoprt-details-dialog-wrapper {
+        max-width: 94vw !important;
+
+        .mat-mdc-dialog-container {
+            width: 94vw;
+            max-width: 1085px !important;
+        }
+    }
+
+    .add-invoice-dialog-wrapper {
+        max-width: 94vw !important;
+
+        .main-content-gap {
+            padding: 0;
+        }
+
+        .mat-mdc-dialog-container {
+            width: 94vw;
+            max-width: 1600px !important;
+        }
+
+        .add-invoice-wrapper {
+            max-height: calc(100vh - 120px) !important;
+        }
+
+        .payment-content-wrapper {
+            overflow: hidden;
+        }
+    }
+
+    .mat-mdc-dialog-content{
+        max-height: 100% !important;
+    }
+}
+
+.insurance-template-wrapper {
+    .mat-mdc-dialog-container {
+        max-width: calc(100vw - 74px) !important;
+        min-width: calc(100vw - 74px);
+    }
+}
+
+.add-communication-template-wrapper {
+    .mat-mdc-dialog-container {
+        min-width: 1194px;
+        max-width: 1194px !important;
+        max-height: 100vh;
+        position: relative;
+        @extend .ec-custom-scroll;
+    }
+}
+
+.barcode-dialog-wrapper {
+    min-width: 446px !important;
+    max-width: 446px !important;
+}
+
+.label-dialog-wrapper {
+    min-width: 546px !important;
+    max-width: 546px !important;
+}
+
+.inv-type-selector-wrapper {
+    min-width: 490px !important;
+    max-width: 490px !important;
+}
+
+.opening-balance-wrapper {
+    min-width: 700px !important;
+    max-width: 700px !important;
+}
+
+.register-payment-wrapper {
+    min-width: 464px !important;
+    max-width: 464px !important;
+}
+
+.dialog-header {
+    margin-bottom: 20px;
+
+    .mat-mdc-icon-button {
+        &.mat-mdc-button-base {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .material-icons {
+            color: var(--color-3);
+            font-size: 20px;
+        }
+
+        svg {
+            width: 10px;
+            height: auto;
+
+            * {
+                fill: var(--color-3);
+            }
+        }
+
+        &.icon-sm {
+            .material-icons {
+                font-size: 16px;
+            }
+        }
+
+        &.right-aligned {
+            margin: -10px -10px 0 0;
+        }
+    }
+}
+
+.dialog-header-text {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 34px;
+    color: var(--primary-black);
+
+    @include tablet {
+        font-size: 21px;
+        line-height: 30px;
+    }
+}
+
+.investigation-popup-wrapper {
+    .cp-content {
+        .form-control-bd-bt {
+            padding: 6px !important;
+        }
+    }
+}

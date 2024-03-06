@@ -1,0 +1,476 @@
+
+
+.owl-dt-popup {
+    margin-top: 8px;
+
+    .owl-dt-inline-container,
+    .owl-dt-popup-container {
+        box-shadow: 0px 7px 24px rgba(0, 0, 0, 14%);
+
+        .owl-dt-timer .owl-dt-timer-hour12 .owl-dt-timer-hour12-box:focus,
+        .owl-dt-timer .owl-dt-timer-hour12 .owl-dt-timer-hour12-box:hover {
+            background: var(--primary-color);
+
+            .owl-dt-control-button-content {
+                background: var(--primary-color);
+                color: var(--white);
+            }
+        }
+    }
+
+    .owl-dt-control-button-content {
+        transition: 0.3s;
+        border-radius: 6px;
+    }
+}
+
+.owl-dt-popup-container {
+    min-width: 226px;
+    max-width: 226px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 10px 20px;
+
+    .owl-dt-timer {
+        padding: 0;
+
+        .owl-dt-timer-box {
+            width: 100%;
+            height: 100%;
+
+            + .owl-dt-timer-box {
+                padding-left: 20px;
+            }
+
+            .owl-dt-control-button {
+                min-width: auto;
+                height: auto;
+                line-height: 0;
+
+                &.owl-dt-control-arrow-button svg {
+                    width: 14px;
+                    height: 10px;
+                    fill: var(--color-3);
+                }
+            }
+
+            .owl-dt-timer-content {
+                margin: 0;
+
+                .owl-dt-timer-input {
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: var(--primary-black);
+                    min-width: 50px;
+                    max-width: 50px;
+                    max-height: 50px;
+                    min-height: 50px;
+                    background: var(--main-bg);
+                    border: 1px solid var(--border-color);
+                    box-sizing: border-box;
+                    border-radius: 6px;
+                }
+            }
+
+            .owl-dt-timer-divider {
+                left: 8px;
+                top: 46%;
+                background-image: url("data:image/svg+xml,%3Csvg width='4' height='10' viewBox='0 0 4 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.97506 9.112C1.6444 9.112 1.36706 9 1.14306 8.776C0.919063 8.552 0.807063 8.27467 0.807063 7.944C0.807063 7.61333 0.919063 7.336 1.14306 7.112C1.36706 6.888 1.6444 6.776 1.97506 6.776C2.29506 6.776 2.56706 6.888 2.79106 7.112C3.01506 7.336 3.12706 7.61333 3.12706 7.944C3.12706 8.27467 3.01506 8.552 2.79106 8.776C2.56706 9 2.29506 9.112 1.97506 9.112ZM1.97506 2.392C1.6444 2.392 1.36706 2.28 1.14306 2.056C0.919063 1.832 0.807063 1.55467 0.807063 1.224C0.807063 0.893333 0.919063 0.616 1.14306 0.391999C1.36706 0.168 1.6444 0.0559998 1.97506 0.0559998C2.29506 0.0559998 2.56706 0.168 2.79106 0.391999C3.01506 0.616 3.12706 0.893333 3.12706 1.224C3.12706 1.55467 3.01506 1.832 2.79106 2.056C2.56706 2.28 2.29506 2.392 1.97506 2.392Z' fill='%23212121'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                width: 4px;
+                height: 24px;
+
+                &::after,
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        .owl-dt-timer-hour12 {
+            color: transparent;
+            margin-left: 16px;
+
+            .owl-dt-timer-hour12-box {
+                background: var(--main-bg);
+                border: 1px solid var(--border-color);
+                box-sizing: border-box;
+                border-radius: 6px;
+
+                .owl-dt-control-button-content {
+                    padding: 0;
+                    min-width: 50px;
+                    max-width: 50px;
+                    height: 50px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: var(--primary-color-darker);
+                }
+
+                &:hover {
+                    .owl-dt-control-button-content {
+                        background: #add8e6;
+                        color: var(--white);
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-dt-container-buttons {
+        display: none;
+    }
+
+    .owl-dt-container-row {
+        border-bottom: none;
+
+        .owl-dt-timer-content {
+            max-height: 74px;
+        }
+    }
+}
+
+.owl-calendar-time-filed {
+    .owl-dt-popup-container {
+        min-width: 350px;
+        max-width: 350px;
+        padding: 0;
+
+        .owl-dt-calendar {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .owl-dt-calendar-control {
+                font-size: 13px;
+                padding: 10px 0;
+
+                .owl-dt-control-arrow-button {
+                    .owl-dt-control-button-content {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    svg {
+                        width: 11px;
+                        height: 8px;
+                        fill: var(--primary-text-color);
+                    }
+                }
+            }
+
+            .owl-dt-control-period-button {
+                .owl-dt-control-button-content {
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: var(--primary-color);
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.04);
+                    }
+                }
+
+                .owl-dt-control-button-arrow {
+                    display: none;
+                }
+            }
+
+            .owl-dt-calendar-view {
+                .owl-dt-calendar-table {
+                    .owl-dt-calendar-header {
+                        .owl-dt-calendar-table-divider {
+                            display: none;
+                        }
+
+                        .owl-dt-weekdays th {
+                            padding-bottom: 5px;
+
+                            span {
+                                font-weight: 400;
+                                font-size: 11px;
+                                line-height: 15px;
+                                text-align: center;
+                                color: var(--secondary-text-color);
+                            }
+                        }
+                    }
+
+                    .owl-dt-calendar-cell-content {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 15px;
+                        text-align: center;
+                        color: var(--color-3);
+                        transition: 0.3s;
+
+                        &.owl-dt-calendar-cell-selected {
+                            background: var(--primary-color);
+                            color: var(--white);
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-dt-timer {
+            padding: 10px 20px;
+            background: var(--bg-color-5);
+            border-radius: 10px;
+            min-height: 126px;
+
+            .owl-dt-timer-box {
+                .owl-dt-timer-input {
+                    min-width: 96px;
+                    max-width: 96px;
+                    max-height: 50px;
+                    min-height: 50px;
+                }
+            }
+
+            .owl-dt-timer-hour12 {
+                .owl-dt-control-button-content {
+                    min-width: 70px;
+                    max-width: 70px;
+                }
+            }
+        }
+    }
+}
+
+.owl-dt-control-button {
+    &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.owl-dt-control-arrow-button {
+        min-width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    }
+}
+
+.owl-dt-calendar-table {
+    .owl-dt-calendar-cell-disabled {
+        pointer-events: none;
+        opacity: 0.4;
+    }
+
+    .owl-dt-calendar-cell-out {
+        opacity: 0.6;
+    }
+}
+
+.owl-dt-container-disabled,
+.owl-dt-trigger-disabled {
+    opacity: 0.7;
+}
+
+.mat-calendar-abbr {
+    &[title] {
+        text-decoration: none;
+    }
+}
+
+// inline style
+.owl-dt-inline {
+    width: 100%;
+
+    &-container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .owl-dt-calendar {
+
+        // padding-left: 20px;
+        // padding-right: 20px;
+        .owl-dt-calendar-control {
+            font-size: 13px;
+            padding: 10px 0;
+
+            .owl-dt-control-arrow-button {
+                .owl-dt-control-button-content {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                svg {
+                    width: 11px;
+                    height: 8px;
+                    fill: var(--primary-text-color);
+                }
+            }
+        }
+
+        .owl-dt-control-period-button {
+            .owl-dt-control-button-content {
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 17px;
+                text-align: center;
+                color: var(--primary-color);
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.04);
+                }
+            }
+
+            .owl-dt-control-button-arrow {
+                display: none;
+            }
+        }
+
+        .owl-dt-calendar-view {
+            .owl-dt-calendar-table {
+                .owl-dt-calendar-header {
+                    .owl-dt-calendar-table-divider {
+                        display: none;
+                    }
+
+                    .owl-dt-weekdays th {
+                        padding-bottom: 5px;
+
+                        span {
+                            font-weight: 400;
+                            font-size: 11px;
+                            line-height: 15px;
+                            text-align: center;
+                            color: var(--secondary-text-color);
+                        }
+                    }
+                }
+
+                .owl-dt-calendar-cell-content {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-align: center;
+                    color: var(--color-3);
+                    transition: 0.3s;
+
+                    &.owl-dt-calendar-cell-selected {
+                        background: var(--primary-color);
+                        color: var(--white);
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-dt-timer {
+        padding: 0;
+
+        .owl-dt-timer-box {
+            width: 100%;
+            height: 100%;
+
+            + .owl-dt-timer-box {
+                padding-left: 20px;
+            }
+
+            .owl-dt-control-button {
+                min-width: auto;
+                height: auto;
+                line-height: 0;
+
+                &.owl-dt-control-arrow-button svg {
+                    width: 14px;
+                    height: 10px;
+                    fill: var(--color-3);
+                }
+            }
+
+            .owl-dt-timer-content {
+                margin: 0;
+
+                .owl-dt-timer-input {
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: var(--primary-black);
+                    min-width: 50px;
+                    max-width: 50px;
+                    max-height: 50px;
+                    min-height: 50px;
+                    background: var(--main-bg);
+                    border: 1px solid var(--border-color);
+                    box-sizing: border-box;
+                    border-radius: 6px;
+                }
+            }
+
+            .owl-dt-timer-divider {
+                left: 8px;
+                top: 46%;
+                background-image: url("data:image/svg+xml,%3Csvg width='4' height='10' viewBox='0 0 4 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.97506 9.112C1.6444 9.112 1.36706 9 1.14306 8.776C0.919063 8.552 0.807063 8.27467 0.807063 7.944C0.807063 7.61333 0.919063 7.336 1.14306 7.112C1.36706 6.888 1.6444 6.776 1.97506 6.776C2.29506 6.776 2.56706 6.888 2.79106 7.112C3.01506 7.336 3.12706 7.61333 3.12706 7.944C3.12706 8.27467 3.01506 8.552 2.79106 8.776C2.56706 9 2.29506 9.112 1.97506 9.112ZM1.97506 2.392C1.6444 2.392 1.36706 2.28 1.14306 2.056C0.919063 1.832 0.807063 1.55467 0.807063 1.224C0.807063 0.893333 0.919063 0.616 1.14306 0.391999C1.36706 0.168 1.6444 0.0559998 1.97506 0.0559998C2.29506 0.0559998 2.56706 0.168 2.79106 0.391999C3.01506 0.616 3.12706 0.893333 3.12706 1.224C3.12706 1.55467 3.01506 1.832 2.79106 2.056C2.56706 2.28 2.29506 2.392 1.97506 2.392Z' fill='%23212121'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                width: 4px;
+                height: 24px;
+
+                &::after,
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        .owl-dt-timer-hour12 {
+            color: transparent;
+            margin-left: 16px;
+
+            .owl-dt-timer-hour12-box {
+                background: var(--main-bg);
+                border: 1px solid var(--border-color);
+                box-sizing: border-box;
+                border-radius: 6px;
+
+                .owl-dt-control-button-content {
+                    padding: 0;
+                    min-width: 50px;
+                    max-width: 50px;
+                    height: 50px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: var(--primary-color-darker);
+                }
+
+                &:hover {
+                    .owl-dt-control-button-content {
+                        background: #add8e6;
+                        color: var(--white);
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-dt-container-buttons {
+        display: none;
+    }
+
+    .owl-dt-container-row {
+        border-bottom: none;
+
+        .owl-dt-timer-content {
+            max-height: 74px;
+        }
+    }
+}

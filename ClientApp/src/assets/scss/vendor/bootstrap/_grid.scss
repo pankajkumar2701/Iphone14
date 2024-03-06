@@ -1,0 +1,8 @@
+.row {
+  --bs-gutter-x: 20px;
+  --bs-gutter-y: 20px;
+
+  &-gutter-y-10 {
+    --bs-gutter-y: 10px;
+  }
+}

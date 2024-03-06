@@ -1,0 +1,251 @@
+// base font family for all material components
+// @import "@angular/material/theming";
+
+//custom-typography: mat-typography-config($font-family: $font-family-base);
+
+//@include angular-material-typography($custom-typography);
+
+.title {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 38px;
+    color: var(--primary-black);
+    margin-bottom: 6px;
+
+    @include tablet {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    &-lg {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 31px;
+        margin-bottom: 11px;
+
+        @include tablet {
+            font-size: 23px;
+            line-height: 29px;
+        }
+    }
+
+    &-xmd {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--primary-black);
+    }
+
+    &-md {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary-black);
+    }
+
+    &-sm {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--primary-black);
+
+        @include tablet {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    &-xs {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary-black);
+        margin-bottom: 4px;
+
+        @media screen and (max-width: 992px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &-gray-xs {
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 1.3;
+        color: var(--primary-text-color);
+        margin-bottom: 5px;
+    }
+
+    &-xs-13 {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        color: var(--color-5);
+
+        @media screen and (max-width: 992px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &-xs-12 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.35;
+        color: var(--primary-black);
+    }
+}
+
+.text {
+    &-gray {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--primary-text-color);
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+
+    &-black {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--primary-black);
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+
+    &-lg {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    &-sm {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--primary-text-color);
+    }
+
+    &-xs {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--color-3);
+    }
+
+    &-xxs {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        color: var(--secondary-text-color);
+    }
+
+    &-bold-sm {
+        font-weight: 600;
+    }
+}
+
+.link {
+    &-blue {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 21px;
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: 0.3s;
+    }
+}
+
+.form-bottom-info {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--primary-text-color);
+    margin-top: 12px;
+
+    svg {
+        margin-right: 4px;
+    }
+}
+
+.text-no-data {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+.print-note {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--secondary-text-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.55978 0C2.48942 0 0 2.49031 0 5.55978C0 8.63105 2.48942 11.1196 5.55978 11.1196C8.63015 11.1196 11.1196 8.63105 11.1196 5.55978C11.1196 2.49031 8.63015 0 5.55978 0ZM5.55978 2.46603C6.0798 2.46603 6.50136 2.88759 6.50136 3.40761C6.50136 3.92763 6.0798 4.34918 5.55978 4.34918C5.03976 4.34918 4.61821 3.92763 4.61821 3.40761C4.61821 2.88759 5.03976 2.46603 5.55978 2.46603ZM6.81522 8.16033C6.81522 8.30889 6.69476 8.42935 6.5462 8.42935H4.57337C4.4248 8.42935 4.30435 8.30889 4.30435 8.16033V7.62228C4.30435 7.47372 4.4248 7.35326 4.57337 7.35326H4.84239V5.91848H4.57337C4.4248 5.91848 4.30435 5.79802 4.30435 5.64946V5.11141C4.30435 4.96285 4.4248 4.84239 4.57337 4.84239H6.00815C6.15672 4.84239 6.27717 4.96285 6.27717 5.11141V7.35326H6.5462C6.69476 7.35326 6.81522 7.47372 6.81522 7.62228V8.16033Z' fill='%237E8599'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    padding-left: 17px;
+}
+
+.comp-high {
+    color: var(--highlight-color) !important;
+    line-height: inherit;
+}
+
+.colon-style {
+    line-height: inherit;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+// preview prescription
+.presc-text {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 18px;
+    color: var(--primary-black);
+}
+
+// common notes style
+.notes-value-wrapper {
+    display: flex;
+    align-items: baseline;
+
+    .item-left {
+        margin-left: 6px;
+    }
+
+    .notes-value {
+        * {
+            display: inline;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.3;
+            color: var(--color-3);
+        }
+
+        &-2 {
+            * {
+                display: inline;
+                font-size: 14px;
+                line-height: 1.3;
+                color: var(--color-3);
+            }
+        }
+    }
+}

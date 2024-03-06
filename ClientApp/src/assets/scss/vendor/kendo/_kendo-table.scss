@@ -1,0 +1,633 @@
+@import "../../helpers/variables";
+@import "../../helpers/responsive";
+@import "../../helpers/mixins";
+
+
+        .kendo-table {
+            width: 100%;
+
+            col.k-sorted,
+            th.k-sorted {
+                background-color: transparent;
+            }
+
+            .k-toolbar {
+                background-color: transparent;
+                padding: 0;
+                border: 0;
+            }
+
+            &.k-grid {
+                border: 0;
+                background-color: transparent;
+
+                .k-table,
+                .k-data-table {
+                    background-color: transparent;
+                }
+
+                .k-grid-content {
+                    background-color: transparent;
+                    overflow-y: auto;
+                    @include custom-scroll;
+                }
+
+                .k-grouping-row {
+
+                    p {
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: var(--color-3);
+                    }
+
+                    .k-icon {
+                        min-width: 20px;
+                        min-height: 20px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        margin: 0 8px 0 0;
+                        transition: background-image 0.3s;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            inset: -5px;
+                            background-color: rgba($primary-gray, .15);
+                            border-radius: 50%;
+                            z-index: -1;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: .3s;
+                        }
+
+                        &:hover {
+                            &::after {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    [aria-label="Collapse Group"] {
+                        .k-icon {
+                            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='%23F3F3F3' stroke='%23DEDEDE'/%3E%3Cpath d='M10.0666 8.99609C9.95666 8.99609 9.84676 8.95412 9.76295 8.87036L7.12582 6.2332C6.95806 6.06544 6.95806 5.79345 7.12582 5.62577C7.29351 5.45808 7.56544 5.45808 7.73321 5.62577L10.0666 7.95927L12.4 5.62585C12.5677 5.45816 12.8396 5.45816 13.0073 5.62585C13.1751 5.79354 13.1751 6.06552 13.0073 6.23328L10.3702 8.87044C10.2864 8.95422 10.1765 8.99609 10.0666 8.99609Z' fill='%23212121'/%3E%3Cpath d='M10.0662 10.9961C10.1762 10.9961 10.2861 11.0381 10.3699 11.1218L13.007 13.759C13.1748 13.9267 13.1748 14.1987 13.007 14.3664C12.8393 14.5341 12.5674 14.5341 12.3996 14.3664L10.0662 12.0329L7.73285 14.3663C7.56509 14.534 7.29318 14.534 7.12551 14.3663C6.95767 14.1987 6.95767 13.9267 7.12551 13.7589L9.7626 11.1217C9.84645 11.038 9.95635 10.9961 10.0662 10.9961Z' fill='%23212121'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+
+                    [aria-label="Expand Group"] {
+                        .k-icon {
+                            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='%23F3F3F3' stroke='%23DEDEDE'/%3E%3Cpath d='M10.0662 5.5C10.1762 5.5 10.2861 5.54197 10.3699 5.62573L13.007 8.26289C13.1748 8.43065 13.1748 8.70264 13.007 8.87033C12.8393 9.03802 12.5674 9.03802 12.3996 8.87033L10.0662 6.53682L7.73285 8.87025C7.56509 9.03793 7.29318 9.03793 7.12551 8.87025C6.95767 8.70256 6.95767 8.43057 7.12551 8.26281L9.7626 5.62565C9.84645 5.54187 9.95635 5.5 10.0662 5.5Z' fill='%23212121'/%3E%3Cpath d='M10.0685 14.4922C9.95862 14.4922 9.84871 14.4502 9.76491 14.3665L7.12777 11.7293C6.96001 11.5615 6.96001 11.2895 7.12777 11.1219C7.29546 10.9542 7.56739 10.9542 7.73516 11.1219L10.0685 13.4554L12.4019 11.1219C12.5697 10.9543 12.8416 10.9543 13.0093 11.1219C13.1771 11.2896 13.1771 11.5616 13.0093 11.7294L10.3722 14.3665C10.2883 14.4503 10.1784 14.4922 10.0685 14.4922Z' fill='%23212121'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
+
+                th,
+                td {
+                    background-color: transparent;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: var(--color-3);
+                    text-overflow: inherit;
+                    white-space: normal;
+                    word-break: break-word;
+                    padding: 15px 8px;
+                    border-width: 0 0 1px 0;
+                    border-color: #e4e4e4;
+
+                    &.order-column {
+                        padding: 0;
+
+                        kendo-icon-wrapper {
+                            background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1.25' cy='1.25' r='1.25' fill='%2395A0A6'/%3E%3Ccircle cx='6.25' cy='1.25' r='1.25' fill='%2395A0A6'/%3E%3Ccircle cx='1.25' cy='6.25' r='1.25' fill='%2395A0A6'/%3E%3Ccircle cx='6.25' cy='6.25' r='1.25' fill='%2395A0A6'/%3E%3Ccircle cx='1.25' cy='11.25' r='1.25' fill='%2395A0A6'/%3E%3Ccircle cx='6.25' cy='11.25' r='1.25' fill='%2395A0A6'/%3E%3C/svg%3E%0A");
+                            display: block;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            margin: auto;
+
+                            .k-i-reorder {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+
+                .td-right-align {
+                    text-align: right;
+                }
+
+                .td-align-top {
+                    vertical-align: top;
+                }
+
+                .k-grid-content-sticky,
+                .k-grid-header-sticky {
+                    background-color: var(--white);
+                }
+
+                tr {
+                    transition: background-color 0.3s;
+
+                    &:not(.k-detail-row):hover {
+                        background-color: var(--bg-color-5);
+                    }
+
+                    &.k-alt,
+                    &.k-table-row {
+                        background-color: transparent;
+                    }
+
+                    &.k-grouping-row {
+                        background-color: transparent;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        td {
+                            background-color: transparent;
+
+                            &:not([aria-expanded="false"]) {
+                                padding-bottom: 6px;
+                                border-bottom: 0;
+
+                                // for no product added row view
+                                &:has(.no-data) {
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+
+                        & + tr {
+                            td {
+                                border-top-width: 0;
+                            }
+                        }
+
+                    }
+
+                    .dp-box-sm {
+                        padding-right: 8px;
+                    }
+
+                    &:last-child {
+                        td {
+                            border-color: transparent;
+                        }
+                    }
+
+                    &.k-filter-row {
+                        td {
+                            padding: 8px 16px;
+                        }
+                    }
+                }
+
+                // When k-grouping-row option active
+                .k-group-col {
+                    width: 28px;
+
+                }
+
+                .kendo-col-disabled {
+                    opacity: .5;
+                    pointer-events: none;
+                }
+
+                .td-text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: var(--color-3);
+
+                    &-right-sorted {
+                        margin-right: 18px;
+                    }
+
+                    &-semi-bold {
+                        font-weight: 500;
+                    }
+                }
+
+                .td-link-text {
+                    display: inline-block;
+                    font-weight: 400;
+                    color: var(--primary-color);
+                    white-space: normal;
+                    word-break: break-word;
+                    margin-right: 15px;
+                    transition: 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--primary-hover-color);
+                    }
+                }
+
+                .k-grid-header {
+                    background-color: transparent;
+                    padding: 0 !important;
+
+                    &-wrap {
+                        border: 0;
+                    }
+
+                    &-table {
+                        .k-table-thead {
+                            background-color: transparent;
+                        }
+                    }
+
+                    .header-right-align {
+                        .k-link {
+                            justify-content: flex-end;
+                        }
+                    }
+
+                    .header-center-align {
+                        .k-link {
+                            justify-content: center;
+                        }
+                    }
+
+                    th,
+                    .k-column-title {
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: var(--primary-text-color);
+                        text-overflow: inherit;
+                        white-space: normal;
+                    }
+
+                    th {
+                        vertical-align: top;
+                        padding: 10px 8px;
+
+                        .k-icon {
+                            width: 16px;
+                            height: 16px;
+                            color: var(--border-color-secondary);
+                            margin-left: 2px;
+                            transition: background-image 0.3s;
+
+                            &::before {
+                                display: none;
+                            }
+
+                            &.k-i-sort {
+                                &-asc-small {
+                                    background-image: url("data:image/svg+xml,%3Csvg width='6' height='11' viewBox='0 0 6 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5L5.83333 5L2.91667 0.416665L0 5Z' fill='%234B4B4B'/%3E%3Cpath d='M6 6.33594L0.166666 6.33594L3.08333 10.9193L6 6.33594Z' fill='%23D2D2D2'/%3E%3C/svg%3E%0A");
+                                    margin-left: 2px;
+                                }
+
+                                &-desc-small {
+                                    background-image: url("data:image/svg+xml,%3Csvg width='6' height='11' viewBox='0 0 6 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5L5.83333 5L2.91667 0.416665L0 5Z' fill='%23D2D2D2'/%3E%3Cpath d='M6 6.33594L0.166666 6.33594L3.08333 10.9193L6 6.33594Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+                                    margin-left: 2px;
+                                }
+                            }
+                        }
+
+                        .k-column-title {
+                            &:empty + [aria-label="Sortable"] {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    tr {
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                // selected row style */
+                .k-selected {
+                    background-color: transparent;
+
+                    &.k-master-row.k-alt .k-grid-content-sticky,
+                    &.k-master-row:hover .k-grid-content-sticky {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+
+            /* details row related styling. */
+            // custom box style for details row
+            tr {
+                &.k-master-row {
+                    &.is-details-active {
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        td {
+                            border-color: transparent;
+                        }
+                    }
+
+                    & + tr {
+
+                        td {
+
+                            &:not([aria-expanded="false"]) {
+
+                                // for no product added row view
+                                &:has(.no-data) {
+                                    padding-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .k-detail-row {
+
+                .k-detail-cell {
+                    padding: 0 0 15px 0;
+                }
+            }
+
+            .inner-table {
+                background-color: var(--bg-color-4);
+                padding: 15px 15px 0 15px;
+                border-radius: 10px;
+
+                .kendo-table {
+                    tr {
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            .k-hierarchy-cell {
+                .k-icon {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                [title="Expand Details"] {
+                    .k-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2L8 10L-3.49691e-07 2L1.36502 0.654318L8 7.28929L14.635 0.654317L16 2Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 12px;
+                    }
+                }
+
+                [title="Collapse Details"] {
+                    .k-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-1.009e-06 8L8 -3.49691e-07L16 8L14.635 9.34568L8 2.71071L1.36502 9.34568L-1.009e-06 8Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 12px;
+                    }
+                }
+            }
+
+            /* details row related styling. */
+
+            .k-pager-wrap {
+                background-color: transparent;
+                padding: 16px 0 0 0;
+                border-color: #e4e4e4;
+
+                &:focus,
+                &.k-focus {
+                    box-shadow: none;
+                }
+            }
+
+            .k-pager-info {
+                order: -1;
+                flex: 1 1 0;
+                justify-content: flex-start;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: var(--primary-text-color);
+                margin: 0;
+            }
+
+            .k-pager-numbers {
+
+                .k-link,
+                .k-pager-nav {
+                    min-width: 26px;
+                    height: 26px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: var(--color-3);
+                    border-radius: 5px;
+                    margin: 0 2px;
+                    transition: all 0.3s;
+
+                    &::after,
+                    &::before {
+                        opacity: 0 !important;
+                    }
+
+                    .k-button-text {
+                        position: relative;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: var(--color-3);
+                        transition: all 0.3s;
+                    }
+
+                    &.k-state-selected,
+                    &.k-selected {
+                        background-color: var(--primary-color-darker) !important;
+                        color: var(--white);
+
+                        .k-button-text {
+                            color: var(--white);
+                        }
+                    }
+
+                    &:not(.k-state-selected):not(.k-selected).k-hover,
+                    &:not(.k-state-selected):not(.k-selected):hover {
+                        background-color: rgba($primary-color-darker, 0.08) !important;
+                    }
+
+                    &.k-focus,
+                    &:focus {
+                        box-shadow: none;
+
+                    }
+                }
+            }
+
+            .k-pager-refresh,
+            .k-pager-nav {
+                min-width: 26px;
+                height: 26px;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+
+            .ec-btn-icon-box-favourite {
+                margin-right: 20px;
+            }
+
+            &.kendo-table-no-header {
+                .k-grid-header {
+                    border-color: transparent;
+
+                    th {
+                        padding: 0;
+                    }
+                }
+            }
+
+            &.kendo-table-row-selected {
+                tr.k-selected {
+
+                    .td-text,
+                    td {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &.kendo-table-editable-fields {
+
+                th,
+                td {
+                    padding: 0;
+                }
+
+                .editable-field {
+                    background-color: transparent;
+                    font-size: 14px;
+                    line-height: 30px;
+                    padding: 8px;
+                    border-color: transparent;
+                    border-radius: 0;
+
+                    &:focus,
+                    &:hover {
+                        border-color: rgba($primary-color, .8);
+                    }
+
+                    &.field-invalid {
+                        background-color: var(--bg-color-3);
+
+                        &:focus,
+                        &:hover {
+                            border-color: darken($bg-color-3, 25%);
+                        }
+                    }
+                }
+
+                .non-editable-field {
+                    padding: 16px 10px 8px 0;
+                }
+            }
+
+            // to hide sub group tr
+            &.table-table-group-view {
+                .k-group-col {
+                    width: 0;
+                }
+
+                .k-table-tbody {
+                    .k-grouping-row {
+                        a {
+                            display: none;
+                        }
+
+                        & + .k-grouping-row {
+                            display: none;
+                        }
+                    }
+                }
+
+                .table-grp-text {
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .kendo-table-with-border {
+            .k-grid-aria-root {
+                border: 1px solid var(--border-color-dark);
+                border-radius: 10px;
+
+                tr {
+
+                    th,
+                    td {
+                        &:first-child {
+                            padding-left: 16px;
+                        }
+                    }
+
+                    &:last-child {
+                        td {
+                            border-width: 0;
+                        }
+                    }
+                }
+            }
+
+            &.k-grid {
+                .k-grid-header {
+                    th {
+                        padding: 16px 10px 8px 6px;
+                    }
+                }
+            }
+
+            .k-pager-wrap {
+                border-color: transparent;
+            }
+
+            &.kendo-table-with-border-stripped {
+
+                &.k-grid {
+                    .k-grid-header {
+
+                        th,
+                        .k-column-title {
+                            text-align: right;
+                        }
+                    }
+
+                    th,
+                    td {
+                        padding: 8px 12px;
+
+                        &:not(:first-child) {
+                            border-left: 1px solid var(--border-color-light);
+                        }
+
+                        &.column-stripped {
+                            background-color: var(--bg-color-5);
+                        }
+                    }
+
+                    td {
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+
+
+        // custom - multi row (Grouping & Details row) related styling end. //
+    

@@ -1,0 +1,94 @@
+.mat-mdc-menu-panel {
+    &.mat-mdc-menu-panel.mat-mdc-menu-panel {
+        min-width: 160px;
+        max-width: 100%;
+        min-height: auto;
+        background-color: var(--white);
+        border-radius: 6px;
+        box-shadow: 0px 7px 24px rgb(0 0 0 / 14%);
+        margin: 10px 0;
+
+        .mat-mdc-menu-content:not(:empty) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mat-mdc-menu-item {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            min-height: auto;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--primary-black);
+            padding: 8px 32px 8px 16px;
+            transition: background-color .4s;
+
+            .mdc-list-item__primary-text {
+                font-size: 14px;
+                line-height: 18px;
+                color: var(--primary-black);
+            }
+
+            .btn-icon {
+                font-size: 20px;
+                color: var(--primary-color);
+                margin-right: 8px;
+                transition: 0.3s;
+            }
+
+            .btn-text {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                color: var(--color-3);
+                transition: 0.3s;
+            }
+
+            .search-item-text {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+                color: var(--primary-color);
+                margin-left: 6px;
+            }
+
+            &:hover:not([disabled]),
+            &.cdk-program-focused:not([disabled]),
+            &.cdk-keyboard-focused:not([disabled]),
+            &-highlighted:not([disabled]) {
+                background-color: rgba($primary-hover-color, .05);
+            }
+        }
+
+        &.mat-menu-lists {
+            border-radius: 0 0 8px 8px;
+            margin: 0;
+
+            .mat-mdc-menu-item {
+                padding: 12px 16px;
+
+                + .mat-mdc-menu-item {
+                    border-top: 1px solid rgba(#d7dfe9, 0.5);
+                }
+            }
+        }
+
+        .mat-mdc-button.mat-mdc-button-base {
+            width: 100%;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+
+        &.mat-menu-icons {
+            .mat-mdc-menu-item {
+                padding: 10px 16px;
+            }
+
+            .mdc-list-item__primary-text {
+                display: inline-flex;
+                align-items: flex-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,268 @@
+@import "../../helpers/variables";
+@import "../../helpers/responsive";
+@import "../../helpers/mixins";
+
+::ng-deep {
+
+    .mat-mdc-tab-group {
+        .mat-mdc-tab-header {
+            .mdc-tab__ripple {
+                display: none;
+            }
+
+            &.mat-mdc-tab-header-pagination-controls-enabled {
+                padding-top: 6px;
+            }
+
+            &-pagination {
+                align-self: center;
+                min-height: 32px;
+                padding: 0;
+                border-radius: 50%;
+                margin-top: -8px;
+
+                &:not(.mat-mdc-tab-header-pagination-disabled) {
+                    background: var(--white);
+                    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+                        0px 4px 5px 0px rgb(0 0 0 / 6%),
+                        0px 1px 10px 0px rgb(0 0 0 / 0%);
+                }
+            }
+
+            .mat-mdc-tab-header-pagination-before,
+            .mat-mdc-tab-header-rtl .mat-tab-header-pagination-after {
+                margin-left: 4px;
+            }
+
+            .mat-mdc-tab-header-rtl .mat-mdc-tab-header-pagination-before,
+            .mat-mdc-tab-header-pagination-after {
+                margin-right: 4px;
+            }
+        }
+
+        .mdc-tab-indicator {
+            .mdc-tab-indicator__content--underline {
+                border-top-width: 3px;
+                transition-property: background-color, color;
+            }
+        }
+
+        .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline,
+        .mat-mdc-tab-link:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
+            --mdc-tab-indicator-active-indicator-color: var(--primary-color);
+        }
+    }
+
+    // secondary tabs styling - like reports module
+    .mat-nav-tabs {
+        &.mat-mdc-tab-group {
+            max-height: 100vh;
+        }
+
+        .mat-mdc-tab-body {
+            &-content {
+                @include custom-scroll;
+            }
+        }
+
+        & > .mat-mdc-tab-header {
+            background: var(--bg-color-4);
+            padding: 10px 5px 0 35px;
+            border-bottom: 1px solid #ced5e3;
+
+            @include desktop-xl {
+                padding: 10px 5px 0 20px;
+            }
+
+            .tab-head-text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: var(--primary-black);
+                transition: color .4s;
+
+                &::selection {
+                    background-color: transparent;
+                }
+            }
+
+            .left-icon {
+                margin-right: 10px;
+
+                svg {
+                    display: block;
+
+                    * {
+                        transition: fill 0.3s;
+                    }
+                }
+            }
+
+            .mdc-tab {
+                min-width: auto;
+                height: auto;
+                padding: 15px 18px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                overflow: hidden;
+
+
+                .mdc-tab-indicator {
+                    &__content--underline {
+                        align-self: stretch;
+                        background-color: var(--white);
+                        border-radius: 6px 6px 0 0;
+                    }
+                }
+
+                &:hover {
+                    .tab-head-text {
+                        color: var(--primary-color);
+                    }
+
+                    .left-icon {
+                        svg {
+                            * {
+                                fill: var(--primary-color);
+                            }
+                        }
+                    }
+
+                }
+
+                .close-item-btn {
+                    &:hover {
+                        .material-icons {
+                            color: var(--highlight-color);
+                        }
+                    }
+                }
+
+                &.mdc-tab--active {
+                    background-color: var(--white);
+
+                    &:after {
+                        background-color: var(--primary-color);
+                    }
+
+                    .tab-head-text {
+                        font-weight: 600;
+                        color: var(--primary-color);
+                    }
+
+                    .left-icon {
+                        svg {
+                            * {
+                                fill: var(--primary-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // main mat tab styling
+    .mat-nav-tabs-common {
+        .mat-mdc-tab-header {
+            background: transparent;
+            padding: 0;
+            border-bottom: 1px solid rgba($border-color-light, 0.7);
+
+            .mdc-tab__text-label,
+            .tab-head-text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: var(--color-3);
+
+                &::selection {
+                    background-color: transparent;
+                }
+            }
+
+            .left-icon {
+                margin-right: 10px;
+
+                svg {
+                    display: block;
+
+                    * {
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+
+        .mat-mdc-tab.mdc-tab {
+            min-width: auto;
+            height: auto;
+            padding: 0 0 10px 0;
+            border-radius: 0;
+            opacity: 1;
+            overflow: visible;
+
+            & + .mdc-tab {
+                margin-left: 32px;
+            }
+
+            &.mdc-tab--active {
+
+                .mdc-tab__text-label,
+                .tab-head-text {
+                    font-weight: 600;
+                    color: var(--primary-color);
+                }
+            }
+
+            &-content {
+                position: relative;
+            }
+
+            .fevr-btn {
+                display: flex;
+                padding: 0;
+                border: 0;
+                margin-left: 4px;
+
+                .fevr-btn-icon {
+                    font-size: 16px;
+                    color: var(--icon-color);
+                }
+
+                &.favourite {
+                    .fevr-btn-icon {
+                        color: var(--extra-color-1);
+
+                    }
+                }
+            }
+
+            .close-item-btn {
+                position: absolute;
+                top: 0;
+                right: -24px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+
+                .material-icons {
+                    color: var(--primary-color);
+                }
+
+                &:hover {
+                    .material-icons {
+                        color: var(--highlight-color);
+                    }
+                }
+            }
+
+            &:hover {
+                .close-item-btn {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

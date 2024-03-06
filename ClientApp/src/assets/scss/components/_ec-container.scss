@@ -1,0 +1,98 @@
+
+
+// common container style. eg: visit component container.
+
+.ec-container {
+    background-color: var(--ec-container-bg-color);
+    padding: var(--ec-container-padding);
+    border: 1px solid var(--ec-container-border-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: border-color .4s;
+
+    &.is-active {
+        border-color: var(--ec-container-active-border-color);
+    }
+
+    &-header {
+        display: flex;
+        align-items: flex-start;
+
+        .header-right-column {
+            margin-left: auto;
+        }
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.3;
+        color: var(--ec-container-title-color);
+        padding-right: var(--ec-container-title-gap);
+        transition: all 0.4s;
+
+        &-sm {
+            font-size: 14px;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        pointer-events: none;
+        transition: all 0.4s;
+
+        .btn-icon {
+            font-size: 21px;
+            color: var(--ec-container-header-btn-icon-color);
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .btn-text {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 21px;
+            color: var(--ec-container-header-btn-text-color);
+            padding-left: 8px;
+            opacity: 0;
+            transition: all 0.4s;
+        }
+    }
+
+    &-child-box {
+        & + .ec-container-child-box {
+            padding-top: var(--ec-container-child-box-gap);
+            border-top: 1px solid var(--border-color-light);
+            margin-top: var(--ec-container-child-box-gap);
+
+            .ec-container {
+                &-title {
+                    margin-top: auto;
+                }
+            }
+
+            .search-box-sec {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &:hover {
+        .ec-container {
+
+            &-btn {
+                .btn-icon {
+                    --ec-container-header-btn-icon-color: var(--ec-container-hover-header-btn-icon-color);
+                }
+
+                .btn-text {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

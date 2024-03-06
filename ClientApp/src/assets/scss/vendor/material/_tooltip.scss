@@ -1,0 +1,12 @@
+.mat-mdc-tooltip {
+    --mdc-plain-tooltip-container-color: var(--black);
+    --mdc-plain-tooltip-supporting-text-color: var(--white);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    border-radius: 5px;
+
+    &.info-tooltip {
+        max-width: unset;
+    }
+}

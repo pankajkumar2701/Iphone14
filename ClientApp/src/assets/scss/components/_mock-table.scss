@@ -1,0 +1,139 @@
+
+
+.mock-table-layout {
+  word-wrap: break-word;
+
+  .th-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--primary-text-color);
+  }
+
+  .td-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--color-3);
+  }
+
+  .mock-table {
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color-light);
+
+      .mock-table-child-row {
+        &:not(:last-child) {
+          padding-bottom: 20px;
+          border-bottom: 1px solid var(--border-color-light);
+        }
+      }
+    }
+
+    &-row-detail {
+      flex-direction: column;
+      align-items: stretch;
+
+      .row-detail-header {
+        &.row-detail-header-open {
+          border-color: transparent;
+          padding-bottom: 6px;
+        }
+      }
+
+      .row-detail-body {
+        background-color: #F3F5F9;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        &-item {
+          min-width: 100px;
+          width: 100px;
+          padding-right: 10px;
+
+          .th-text {
+            padding-bottom: 8px;
+          }
+        }
+      }
+    }
+
+    &-column {
+      &:not(:last-child) {
+        padding-right: 10px;
+      }
+    }
+
+    &-header {
+      padding: 0 0 8px 0;
+    }
+  }
+
+  &.mock-table-layout-scrollable {
+    overflow-y: hidden;
+    @include custom-scroll;
+
+    .mock-table {
+      &-row {
+        &:not(.detail-row) {
+          flex-wrap: nowrap;
+          min-width: min-content;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-scrollable {
+    overflow-y: hidden;
+    @include custom-scroll;
+
+    .mock-table-layout {
+      min-width: max-content;
+    }
+
+    .mock-table {
+      &-row {
+        &:not(.detail-row) {
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+
+  &-sticky {
+    overflow: auto;
+    max-height: 70vh;
+
+    .mock-table {
+      &-header {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 99;
+      }
+
+      &-layout {
+        .mock-table-layout {
+          .mock-table {
+            &-header {
+              z-index: 98;
+            }
+          }
+        }
+
+        .row-detail-body {
+          .mock-table {
+            &-header {
+              background-color: #F3F5F9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+
+
+.template-list {
+    .template-item {
+        padding: 16px 0;
+
+        &-sm {
+            padding: 9px 0;
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        & + .template-item {
+            border-top: 1px solid var(--border-color-light);
+        }
+    }
+
+    &.cdk-drop-list {
+        .template-item {
+            padding-right: 8px;
+
+            &:hover {
+                .drag-handle {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .drag-handle {
+            margin-left: -13px;
+        }
+    }
+
+    &.cdk-drop-list-dragging {
+        .template-item {
+            &:not(.cdk-drag-placeholder) {
+                transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+    }
+}

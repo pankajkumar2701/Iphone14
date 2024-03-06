@@ -1,0 +1,60 @@
+.custom-slide-toggle {
+    &.mat-mdc-slide-toggle {
+        --mdc-switch-handle-width: 8px;
+        --mdc-switch-handle-height: 8px;
+        --mdc-switch-track-width: 26px;
+        --mdc-switch-track-height: 14px;
+        --mdc-switch-state-layer-size: 30px;
+        --mdc-switch-selected-track-color: var(--dark-green);
+        --mdc-switch-selected-focus-track-color: var(--dark-green);
+        --mdc-switch-selected-pressed-track-color: var(--dark-green);
+        --mdc-switch-unselected-handle-color: transparent;
+        --mdc-switch-handle-surface-color: transparent;
+        --mdc-switch-unselected-focus-handle-color: transparent;
+        --mdc-switch-unselected-hover-handle-color: transparent;
+        --mdc-switch-unselected-focus-track-color: var(--border-color-secondary);
+        --mdc-switch-unselected-hover-track-color: var(--border-color-secondary);
+
+        .mdc-switch__icons {
+            display: none;
+        }
+
+        .mdc-switch__handle {
+            .mdc-switch__shadow {
+                background-color: var(--white);
+            }
+
+            &-track {
+                left: 3px;
+            }
+        }
+
+        .mdc-switch--selected .mdc-switch__handle-track {
+            left: -3px;
+        }
+
+        .mdc-form-field {
+            color: var(--color-3);
+
+            label {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                padding-left: 8px;
+            }
+        }
+
+        &.mat-disabled {
+            opacity: 0.3;
+        }
+    }
+
+    &-primary {
+
+        &.mat-mdc-slide-toggle {
+            --mdc-switch-selected-track-color: var(--primary-color);
+            --mdc-switch-selected-focus-track-color: var(--primary-color);
+            --mdc-switch-selected-pressed-track-color: var(--primary-color);
+        }
+    }
+}

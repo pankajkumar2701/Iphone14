@@ -1,0 +1,17 @@
+
+
+
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+
+  .main-navber-box {
+    min-width: 74px;
+    max-width: 74px;
+  }
+
+  .main-content-area {
+    min-width: 0;
+    flex: 1 1 0;
+  }
+}

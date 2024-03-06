@@ -1,0 +1,364 @@
+.form-cus-row {
+    .row-item-quarter {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    .row-item-38 {
+        flex: 0 0 auto;
+        width: 38%;
+    }
+
+    .row-item-half {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .row-item-62 {
+        flex: 0 0 auto;
+        width: 62%;
+    }
+
+    .row-item-65 {
+        flex: 0 0 auto;
+        width: 65%;
+    }
+
+    .row-item-75 {
+        flex: 0 0 auto;
+        width: calc(100% - (100% / 3));
+    }
+
+    .row-item-full {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .row-item-stretch {
+        min-width: 0;
+        flex: 1 1 0;
+    }
+
+    .row-item-3 {
+        flex: 0 0 auto;
+        width: calc(100% / 3);
+    }
+}
+
+.row-gutter-20 {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    [class*="row-item-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.row-gutter-10 {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    [class*="row-item-"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.label {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--primary-text-color);
+    margin-bottom: 8px;
+}
+
+.form-control {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    color: var(--primary-black);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: border-color .3s;
+
+    &.field-invalid {
+        border-color: var(--primary-error);
+    }
+
+    &-bg {
+        background: var(--main-bg);
+    }
+
+    &-bd {
+        &-bt {
+            background: transparent;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--primary-black);
+            padding: 0 4px 8px 4px;
+            border: 0;
+            border-bottom: 1px solid var(--border-color-secondary);
+            border-radius: 0;
+        }
+    }
+
+    &-sm-bg {
+        background: var(--main-bg);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--primary-black);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        transition: all 0.4s;
+    }
+
+    &-plain {
+        background-color: transparent;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--primary-black);
+        padding: 0 5px;
+        border: 0;
+    }
+}
+
+.input-form-field-bd-bt {
+    --ec-mat-mdc-form-field-focus-overlay-color: transparent;
+    padding: 0 4px 8px 4px;
+    border-bottom: 1px solid var(--border-color-secondary);
+
+    /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
+    .mat-mdc-select-value-text,
+    mat-mdc-select-trigger {
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--primary-black);
+    }
+
+    &.comp-high {
+
+        /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
+        .mat-mdc-select-value-text,
+        mat-mdc-select-trigger {
+            color: var(--highlight-color);
+        }
+    }
+}
+
+//       // // not using anymore double check and remove
+// .input-form-field-bd-none {
+
+//     /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
+//     .mat-select-value-text,
+//     .mat-select-min-line {
+//         font-size: 14px;
+//         line-height: 18px;
+//         color: var(--primary-black);
+//     }
+
+//     &.comp-high {
+
+//         /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
+//         .mat-select-value-text,
+//         .mat-select-min-line {
+//             color: var(--highlight-color);
+//         }
+//     }
+
+//     /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
+//     .mat-select-arrow {
+//         background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50072 6.06501C4.33943 6.06501 4.17815 6.00342 4.05517 5.8805L0.185375 2.01067C-0.0607947 1.7645 -0.0607947 1.36538 0.185375 1.11931C0.431445 0.873236 0.830487 0.873236 1.07668 1.11931L4.50072 4.54355L7.92479 1.11943C8.17096 0.873356 8.56996 0.873356 8.81601 1.11943C9.0623 1.3655 9.0623 1.76462 8.81601 2.01079L4.94627 5.88062C4.82324 6.00356 4.66196 6.06501 4.50072 6.06501Z' fill='%234b4b4b'/%3E%3C/svg%3E%0A");
+//         width: 9px;
+//         height: 7px;
+//         border: 0;
+//     }
+// }
+
+.mat-mdc-form-field-error {
+    --mdc-theme-error: var(--primary-error);
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+}
+
+.form-group-mb {
+    margin-bottom: 20px;
+
+    /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version.*/
+    .input-form-field.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        margin-bottom: 0;
+    }
+
+    .form-bottom-info {
+        margin-top: 6px;
+    }
+}
+
+.form-actions {
+    .ec-cancel-btn {
+        margin-left: 5px;
+    }
+}
+
+// select with search result custom
+.filter-custom {
+    .mat-filter {
+        padding-bottom: 8px !important;
+    }
+}
+
+textarea {
+    &.textarea-normal {
+        width: 100%;
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--primary-black);
+        vertical-align: bottom;
+        border: 0;
+        padding: 2px 0;
+        margin: 0;
+    }
+
+    &.form-control {
+        min-height: auto;
+    }
+}
+
+.dummy-form-fields {
+    &-item {
+        display: flex;
+
+        .mdc-form-field {
+            align-items: flex-start;
+        }
+
+        &:not(.dummy-form-fields-item-row) {
+            flex-direction: column;
+        }
+
+        &-row {
+            .dummy-field {
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-lists {
+            .dummy-form-fields {
+                &-item {
+                    &-list-item {
+                        & + .dummy-form-fields-item-list-item {
+                            padding-top: 16px;
+                            border-top: 1px solid var(--border-color-light);
+                            margin-top: 16px;
+                        }
+                    }
+                }
+            }
+
+            .list-item-title {
+                color: var(--color-3);
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &-lists {
+        display: flex;
+        align-items: center;
+
+        .dummy-field {
+            &-number {
+                min-width: 160px;
+            }
+
+            &-select {
+                min-width: 240px;
+            }
+        }
+    }
+
+    .dummy-field {
+        background-color: #e5e9ed;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--color-3);
+        padding: 6px 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        margin-right: 10px;
+
+        &-number {
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='15' viewBox='0 0 6 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.132291 2.92679C-0.177987 3.46771 0.0761968 3.90625 0.699572 3.90625L5.29981 3.90625C5.92381 3.90625 6.17766 3.46771 5.86768 2.92679L3.56175 0.40591C3.25137 -0.135191 2.74849 -0.135191 2.43818 0.40591L0.132291 2.92679Z' fill='%234b4b4b'/%3E%3Cpath d='M5.86771 11.3388C6.17799 10.7979 5.9238 10.3594 5.30043 10.3594L0.700191 10.3594C0.0761924 10.3594 -0.177662 10.7979 0.132323 11.3388L2.43825 13.8597C2.74863 14.4008 3.25151 14.4008 3.56182 13.8597L5.86771 11.3388Z' fill='%234b4b4b'/%3E%3C/svg%3E%0A");
+        }
+
+        &-select {
+            background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.49998 5.13025C4.33868 5.13025 4.1774 5.06867 4.05442 4.94575L0.184627 1.07591C-0.0615424 0.829744 -0.0615424 0.430623 0.184627 0.184553C0.430697 -0.0615175 0.829739 -0.0615175 1.07593 0.184553L4.49998 3.6088L7.92404 0.184672C8.17021 -0.0613979 8.56921 -0.0613979 8.81526 0.184672C9.06155 0.430742 9.06155 0.829864 8.81526 1.07603L4.94553 4.94587C4.82249 5.06881 4.66121 5.13025 4.49998 5.13025Z' fill='%234b4b4b'/%3E%3C/svg%3E%0A");
+            min-width: 240px;
+        }
+
+        &-date {
+            background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.58203 0.859375H8.59375V0.34375C8.59375 0.153914 8.43986 0 8.25 0C8.06014 0 7.90625 0.153914 7.90625 0.34375V0.859375H3.09375V0.34375C3.09375 0.153914 2.93986 0 2.75 0C2.56014 0 2.40625 0.153914 2.40625 0.34375V0.859375H1.41797C0.636088 0.859375 0 1.49546 0 2.27734V9.58203C0 10.3639 0.636088 11 1.41797 11H9.58203C10.3639 11 11 10.3639 11 9.58203V2.27734C11 1.49546 10.3639 0.859375 9.58203 0.859375ZM10.3125 9.58203C10.3125 9.98547 9.98547 10.3125 9.58203 10.3125H1.41797C1.01454 10.3125 0.6875 9.98547 0.6875 9.58203V3.88867C0.6875 3.82935 0.735604 3.78125 0.794922 3.78125H10.2051C10.2644 3.78125 10.3125 3.82935 10.3125 3.88867V9.58203Z' fill='%234b4b4b'/%3E%3C/svg%3E%0A");
+            min-width: 200px;
+        }
+    }
+}
+
+.mat-mdc-radio-button {
+    .dummy-form-fields {
+        padding-left: 5px;
+    }
+}
+
+.no-resize,
+.resizeStyle {
+    resize: none;
+    overflow: hidden;
+}
+
+.form-control {
+    &-sm {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: var(--primary-black);
+    }
+
+    &-blank {
+        min-height: 18px;
+        padding: 0;
+        border: 0;
+    }
+
+    &-height-md {
+        min-height: 37px;
+    }
+
+    &-bg {
+        background-color: var(--main-bg);
+    }
+}
+
+
+.form-top-title {
+    word-break: break-word;
+    margin-bottom: 8px;
+}
+
+.form-prefix-label {
+    word-break: break-word;
+    margin-right: 8px;
+}
